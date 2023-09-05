@@ -40,7 +40,7 @@
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_8z08qcz5sq3.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1693892739411">
+  <link rel="stylesheet" href="/css/style.css?v=1693893662981">
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -211,7 +211,7 @@
         <article>
             <p>spark(HA)</p>
 <span id="more"></span>
-<h1 id="（1）在spark-env-sh中-删除-SPARK-MASTER-HOST-x3D-node1，增加："><a href="#（1）在spark-env-sh中-删除-SPARK-MASTER-HOST-x3D-node1，增加：" class="headerlink" title="（1）在spark-env.sh中, 删除: SPARK_MASTER_HOST&#x3D;node1，增加："></a>（1）在spark-env.sh中, 删除: SPARK_MASTER_HOST&#x3D;node1，增加：</h1><p> <img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/HA/h1.png" alt="HA" class="lazyload"><br>将spark-env.sh分发到node2和node3上</p>
+<h1 id="（1）在spark-env-sh中-删除-SPARK-MASTER-HOST-x3D-node1，增加："><a href="#（1）在spark-env-sh中-删除-SPARK-MASTER-HOST-x3D-node1，增加：" class="headerlink" title="（1）在spark-env.sh中, 删除: SPARK_MASTER_HOST&#x3D;node1，增加："></a>（1）在spark-env.sh中, 删除: SPARK_MASTER_HOST&#x3D;node1，增加：</h1><p> <img data-fancybox="gallery" data-sizes="auto" data-src="h1.png" alt="HA" class="lazyload"><br>将spark-env.sh分发到node2和node3上</p>
 <pre><code class="bash">scp spark-env.sh node2:/export/server/spark/conf/
 scp spark-env.sh node3:/export/server/spark/conf/
 </code></pre>
@@ -224,12 +224,12 @@ scp spark-env.sh node3:/export/server/spark/conf/
 <p>#注意, 下面命令在node2上执行</p>
 <pre><code class="bash">sbin/start-master.sh
 </code></pre>
-<p>#在node2上启动一个备用的master进程<br> <img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/HA/h2.png" alt="HA" class="lazyload"><br> <img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/HA/h3.png" alt="HA" class="lazyload"></p>
+<p>#在node2上启动一个备用的master进程<br> <img data-fancybox="gallery" data-sizes="auto" data-src="h2.png" alt="HA" class="lazyload"><br> <img data-fancybox="gallery" data-sizes="auto" data-src="h3.png" alt="HA" class="lazyload"></p>
 <h1 id="（3）master主备切换"><a href="#（3）master主备切换" class="headerlink" title="（3）master主备切换"></a>（3）master主备切换</h1><p>提交一个spark任务到当前alive master上：</p>
 <pre><code class="bash">bin/spark-submit --master spark://node1:7077
 /export/server/spark/examples/src/main/python/pi.py 1000
 </code></pre>
-<p><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/HA/h4.png" alt="HA" class="lazyload"></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="h4.png" alt="HA" class="lazyload"></p>
 
         </article>
 
@@ -982,7 +982,7 @@ scp spark-env.sh node3:/export/server/spark/conf/
 <script src="/lib/fancybox/js/jquery.fancybox.min.js"></script>
 
 
-<script src="/js/app.js?v=1693892739411"></script>
+<script src="/js/app.js?v=1693893662982"></script>
 
 <script src="https://lib.baomitu.com/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
 <script>
@@ -999,6 +999,14 @@ scp spark-env.sh node3:/export/server/spark/conf/
 
 
 <!-- hexo injector body_end start -->
+<script src="/js/clock.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<script src="/js/search.js"></script>
+
+<script src="/js/webapp.js"></script>
+
 <script src="https://lib.baomitu.com/clipboard.js/2.0.8/clipboard.min.js"></script>
 
 <script src="/lib/codeBlock/codeBlockFuction.js"></script>
@@ -1010,14 +1018,6 @@ scp spark-env.sh node3:/export/server/spark/conf/
 <script src="/lib/codeBlock/codeShrink.js"></script>
 
 <link rel="stylesheet" href="/lib/codeBlock/matery.css">
-
-<script src="/js/clock.js"></script>
-
-<script src="/js/webapp.js"></script>
-
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-
-<script src="/js/search.js"></script>
 <!-- hexo injector body_end end --></body>
 </html>
 

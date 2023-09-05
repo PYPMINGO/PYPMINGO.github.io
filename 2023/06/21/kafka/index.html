@@ -42,7 +42,7 @@
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_8z08qcz5sq3.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1693892739404">
+  <link rel="stylesheet" href="/css/style.css?v=1693893662976">
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -213,7 +213,7 @@
         <article>
             <p>Kafka</p>
 <span id="more"></span>
-<p>一、安装kafka集群<br>（1）上传安装包并解压<br>tar -zxvf kafka_2.12-2.4.1.tgz &#x2F;export&#x2F;server<br>（2）修改配置文件<br>#进入配置文件目录<br>cd &#x2F;export&#x2F;server&#x2F;kafka&#x2F;config<br>#编辑配置文件<br>vi server.properties<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/21/kafka/k1.png" alt="kafka" class="lazyload"><br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/21/kafka/k2.png" alt="kafka" class="lazyload"><br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/21/kafka/k3.png" alt="kafka" class="lazyload"><br>（3）分发安装包并配置环境变量<br>scp -r &#x2F;export&#x2F;server&#x2F; kafka_2.12-2.4.1&#x2F; root@node2:&#x2F;export&#x2F;server&#x2F;<br>scp -r &#x2F;export&#x2F;server&#x2F; kafka_2.12-2.4.1&#x2F; root@node3:&#x2F;export&#x2F;server&#x2F;<br>#配置环境变量<br>vi &#x2F;etc&#x2F;profile<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/21/kafka/k4.png" alt="kafka" class="lazyload"><br>配置完重新加载环境变量：<br>source &#x2F;etc&#x2F;profile<br>将profile文件分发到node2和node3上：<br>scp &#x2F;etc&#x2F;profile&#x2F; root@node2:&#x2F;etc&#x2F;<br>scp &#x2F;etc&#x2F;profile&#x2F; root@node3:&#x2F;etc&#x2F;<br>#在node2和node3上修改配置文件<br>broker.id&#x3D;1<br>broker.id&#x3D;2<br>二、编写kafka一键启停脚本<br>Vi kafkaall.sh<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/21/kafka/k5.jpg" alt="kafka" class="lazyload"><br> <br>启动测试：<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/21/kafka/k6.jpg" alt="kafka" class="lazyload"></p>
+<p>一、安装kafka集群<br>（1）上传安装包并解压<br>tar -zxvf kafka_2.12-2.4.1.tgz &#x2F;export&#x2F;server<br>（2）修改配置文件<br>#进入配置文件目录<br>cd &#x2F;export&#x2F;server&#x2F;kafka&#x2F;config<br>#编辑配置文件<br>vi server.properties<br><img data-fancybox="gallery" data-sizes="auto" data-src="k1.png" alt="kafka" class="lazyload"><br><img data-fancybox="gallery" data-sizes="auto" data-src="k2.png" alt="kafka" class="lazyload"><br><img data-fancybox="gallery" data-sizes="auto" data-src="k3.png" alt="kafka" class="lazyload"><br>（3）分发安装包并配置环境变量<br>scp -r &#x2F;export&#x2F;server&#x2F; kafka_2.12-2.4.1&#x2F; root@node2:&#x2F;export&#x2F;server&#x2F;<br>scp -r &#x2F;export&#x2F;server&#x2F; kafka_2.12-2.4.1&#x2F; root@node3:&#x2F;export&#x2F;server&#x2F;<br>#配置环境变量<br>vi &#x2F;etc&#x2F;profile<br><img data-fancybox="gallery" data-sizes="auto" data-src="k4.png" alt="kafka" class="lazyload"><br>配置完重新加载环境变量：<br>source &#x2F;etc&#x2F;profile<br>将profile文件分发到node2和node3上：<br>scp &#x2F;etc&#x2F;profile&#x2F; root@node2:&#x2F;etc&#x2F;<br>scp &#x2F;etc&#x2F;profile&#x2F; root@node3:&#x2F;etc&#x2F;<br>#在node2和node3上修改配置文件<br>broker.id&#x3D;1<br>broker.id&#x3D;2<br>二、编写kafka一键启停脚本<br>Vi kafkaall.sh<br><img data-fancybox="gallery" data-sizes="auto" data-src="k5.jpg" alt="kafka" class="lazyload"><br> <br>启动测试：<br><img data-fancybox="gallery" data-sizes="auto" data-src="k6.jpg" alt="kafka" class="lazyload"></p>
 
         </article>
 
@@ -966,7 +966,7 @@
 <script src="/lib/fancybox/js/jquery.fancybox.min.js"></script>
 
 
-<script src="/js/app.js?v=1693892739405"></script>
+<script src="/js/app.js?v=1693893662976"></script>
 
 <script src="https://lib.baomitu.com/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
 <script>
@@ -983,6 +983,14 @@
 
 
 <!-- hexo injector body_end start -->
+<script src="/js/clock.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<script src="/js/search.js"></script>
+
+<script src="/js/webapp.js"></script>
+
 <script src="https://lib.baomitu.com/clipboard.js/2.0.8/clipboard.min.js"></script>
 
 <script src="/lib/codeBlock/codeBlockFuction.js"></script>
@@ -994,14 +1002,6 @@
 <script src="/lib/codeBlock/codeShrink.js"></script>
 
 <link rel="stylesheet" href="/lib/codeBlock/matery.css">
-
-<script src="/js/clock.js"></script>
-
-<script src="/js/webapp.js"></script>
-
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-
-<script src="/js/search.js"></script>
 <!-- hexo injector body_end end --></body>
 </html>
 

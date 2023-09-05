@@ -41,7 +41,7 @@
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_8z08qcz5sq3.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1693892739413">
+  <link rel="stylesheet" href="/css/style.css?v=1693893662983">
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -224,7 +224,7 @@
                   docker-engine \
                   docker-ce
 </code></pre>
-<p> <img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/docker/d1.png" alt="docker" class="lazyload"></p>
+<p> <img data-fancybox="gallery" data-sizes="auto" data-src="d1.png" alt="docker" class="lazyload"></p>
 <h1 id="2-Yum源配置"><a href="#2-Yum源配置" class="headerlink" title="2.Yum源配置"></a>2.Yum源配置</h1><pre><code class="bash">备份配置文件
 mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
 
@@ -235,13 +235,13 @@ wget -O /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.repo
 yum clean all
 yum makecache
 </code></pre>
-<p> <img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/docker/d2.png" alt="docker" class="lazyload"></p>
+<p> <img data-fancybox="gallery" data-sizes="auto" data-src="d2.png" alt="docker" class="lazyload"></p>
 <h1 id="3-docker安装"><a href="#3-docker安装" class="headerlink" title="3.docker安装"></a>3.docker安装</h1><p>（1）需要虚拟机连网，安装yum工具</p>
 <pre><code class="bash">yum install -y yum-utils \
            device-mapper-persistent-data \
            lvm2 --skip-broken
 </code></pre>
-<p> <img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/docker/d3.png" alt="docker" class="lazyload"><br>（2）更新本地镜像源</p>
+<p> <img data-fancybox="gallery" data-sizes="auto" data-src="d3.png" alt="docker" class="lazyload"><br>（2）更新本地镜像源</p>
 <pre><code class="bash">um-config-manager \
     --add-repo \
     https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
@@ -250,10 +250,10 @@ sed -i &#39;s/download.docker.com/mirrors.aliyun.com\/docker-ce/g&#39; /etc/yum.
 
 yum makecache fast
 </code></pre>
-<p> <img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/docker/d4.png" alt="docker" class="lazyload"><br>（3）docker安装</p>
+<p> <img data-fancybox="gallery" data-sizes="auto" data-src="d4.png" alt="docker" class="lazyload"><br>（3）docker安装</p>
 <pre><code class="bash">输入命令：yum install -y docker-ce
 </code></pre>
-<p> <img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/docker/d5.png" alt="docker" class="lazyload"><br> Docker安装完毕！</p>
+<p> <img data-fancybox="gallery" data-sizes="auto" data-src="d5.png" alt="docker" class="lazyload"><br> Docker安装完毕！</p>
 
         </article>
 
@@ -1006,7 +1006,7 @@ yum makecache fast
 <script src="/lib/fancybox/js/jquery.fancybox.min.js"></script>
 
 
-<script src="/js/app.js?v=1693892739413"></script>
+<script src="/js/app.js?v=1693893662984"></script>
 
 <script src="https://lib.baomitu.com/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
 <script>
@@ -1023,6 +1023,14 @@ yum makecache fast
 
 
 <!-- hexo injector body_end start -->
+<script src="/js/clock.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<script src="/js/search.js"></script>
+
+<script src="/js/webapp.js"></script>
+
 <script src="https://lib.baomitu.com/clipboard.js/2.0.8/clipboard.min.js"></script>
 
 <script src="/lib/codeBlock/codeBlockFuction.js"></script>
@@ -1034,14 +1042,6 @@ yum makecache fast
 <script src="/lib/codeBlock/codeShrink.js"></script>
 
 <link rel="stylesheet" href="/lib/codeBlock/matery.css">
-
-<script src="/js/clock.js"></script>
-
-<script src="/js/webapp.js"></script>
-
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-
-<script src="/js/search.js"></script>
 <!-- hexo injector body_end end --></body>
 </html>
 

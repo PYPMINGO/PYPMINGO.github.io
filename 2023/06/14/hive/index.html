@@ -48,7 +48,7 @@
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_8z08qcz5sq3.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1693892739409">
+  <link rel="stylesheet" href="/css/style.css?v=1693893662980">
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -219,7 +219,7 @@
         <article>
             <p>Hive</p>
 <span id="more"></span>
-<p>卸载Centos7自带的mariadb<br> <img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/hive/e1.png" alt="hive" class="lazyload"></p>
+<p>卸载Centos7自带的mariadb<br> <img data-fancybox="gallery" data-sizes="auto" data-src="e1.png" alt="hive" class="lazyload"></p>
 <p>安装mysql</p>
 <pre><code class="bash">mkdir /export/server/mysql
 </code></pre>
@@ -231,7 +231,7 @@
 
 [root@node1 mysql]rpm -ivh mysql-community-common-5.7.29-1.el7.x86_64.rpm mysql-community-libs-5.7.29-1.el7.x86_64.rpm mysql-community-client-5.7.29-1.el7.x86_64.rpm mysql-community-server-5.7.29-1.el7.x86_64.rpm
 </code></pre>
-<p> <img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/hive/e2.png" alt="hive" class="lazyload"></p>
+<p> <img data-fancybox="gallery" data-sizes="auto" data-src="e2.png" alt="hive" class="lazyload"></p>
 <p>mysql初始化设置<br>#初始化</p>
 <pre><code class="bash">mysqld --initialize
 </code></pre>
@@ -244,11 +244,11 @@
 <p>#查看生成的临时root密码</p>
 <pre><code class="bash">cat  /var/log/mysqld.log
 </code></pre>
-<p><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/hive/e3.jpg" alt="hive" class="lazyload"></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="e3.jpg" alt="hive" class="lazyload"></p>
 <p>修改root密码 授权远程访问 设置开机自启动    </p>
 <pre><code class="bash">[root@node1 ~]# mysql -u root -p
 </code></pre>
-<p> <img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/hive/e4.png" alt="hive" class="lazyload"><br>#更新root密码  设置为hadoop</p>
+<p> <img data-fancybox="gallery" data-sizes="auto" data-src="e4.png" alt="hive" class="lazyload"><br>#更新root密码  设置为hadoop</p>
 <pre><code class="bash">mysql&gt; alter user user() identified by &quot;hadoop&quot;;
 Query OK, 0 rows affected (0.00 sec)
 </code></pre>
@@ -271,11 +271,11 @@ systemctl start mysqld
 <p>#查看是否已经设置自启动成功</p>
 <pre><code class="bash">[root@node1 ~]# systemctl list-unit-files | grep mysqld
 </code></pre>
-<p> <img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/hive/e5.png" alt="hive" class="lazyload"><br>上传安装包 解压</p>
+<p> <img data-fancybox="gallery" data-sizes="auto" data-src="e5.png" alt="hive" class="lazyload"><br>上传安装包 解压</p>
 <pre><code class="bash">tar zxvf apache-hive-3.1.2-bin.tar.gz
 ln -s apache-hive-3.1.2-bin hive
 </code></pre>
-<p>解决Hive与Hadoop之间guava版本差异<br> <img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/hive/e6.png" alt="hive" class="lazyload"><br>注：因之前cp过此处弹出覆盖。</p>
+<p>解决Hive与Hadoop之间guava版本差异<br> <img data-fancybox="gallery" data-sizes="auto" data-src="e6.png" alt="hive" class="lazyload"><br>注：因之前cp过此处弹出覆盖。</p>
 <p>修改配置文件</p>
 <pre><code class="bash">hive-env.sh
 cd /export/server/hive/conf
@@ -286,11 +286,11 @@ export HADOOP_HOME=/export/server/hadoop
 export HIVE_CONF_DIR=/export/server/hive/conf
 export HIVE_AUX_JARS_PATH=/export/server/hive/lib
 </code></pre>
-<p> <img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/hive/e7.jpg" alt="hive" class="lazyload"></p>
+<p> <img data-fancybox="gallery" data-sizes="auto" data-src="e7.jpg" alt="hive" class="lazyload"></p>
 <pre><code class="bash">hive-site.xml
 vim hive-site.xml
 </code></pre>
-<p> <img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/hive/e8.png" alt="hive" class="lazyload"><br> <img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/hive/e9.jpg" alt="hive" class="lazyload"><br>上传mysql jdbc驱动到hive安装包lib下</p>
+<p> <img data-fancybox="gallery" data-sizes="auto" data-src="e8.png" alt="hive" class="lazyload"><br> <img data-fancybox="gallery" data-sizes="auto" data-src="e9.jpg" alt="hive" class="lazyload"><br>上传mysql jdbc驱动到hive安装包lib下</p>
 <pre><code class="bash">mysql-connector-java-5.1.32.jar
 </code></pre>
 <p>初始化元数据</p>
@@ -298,7 +298,7 @@ vim hive-site.xml
 
 bin/schematool -initSchema -dbType mysql -verbos
 </code></pre>
-<p> <img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/hive/e10.jpg" alt="hive" class="lazyload"></p>
+<p> <img data-fancybox="gallery" data-sizes="auto" data-src="e10.jpg" alt="hive" class="lazyload"></p>
 <p>启动hive后<br>启动metastore服务</p>
 <pre><code class="bash">/export/server/hive/bin/hive --service metastore
 </code></pre>
@@ -310,7 +310,7 @@ beeline客户端连接
 •	拷贝node1安装包到beeline客户端机器上（node3）
 •	scp -r /export/server/apache-hive-3.1.2-bin/ root@node3:/export/server/
 </code></pre>
-<p> <img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/hive/e11.jpg" alt="hive" class="lazyload"></p>
+<p> <img data-fancybox="gallery" data-sizes="auto" data-src="e11.jpg" alt="hive" class="lazyload"></p>
 <p>修改<br>在hadoop的配置文件core-site.xml中添加如下属性：</p>
 <pre><code class="bash">&lt;property&gt;
         &lt;name&gt;hadoop.proxyuser.root.hosts&lt;/name&gt;
@@ -327,7 +327,7 @@ beeline&gt; ! connect jdbc:hive2://node1:10000
 beeline&gt; root
 beeline&gt; 直接回车
 </code></pre>
-<p><img data-fancybox="gallery" data-sizes="auto" data-src="/2023/06/14/hive/e12.png" alt="hive" class="lazyload"></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="e12.png" alt="hive" class="lazyload"></p>
 
         </article>
 
@@ -1080,7 +1080,7 @@ beeline&gt; 直接回车
 <script src="/lib/fancybox/js/jquery.fancybox.min.js"></script>
 
 
-<script src="/js/app.js?v=1693892739409"></script>
+<script src="/js/app.js?v=1693893662980"></script>
 
 <script src="https://lib.baomitu.com/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
 <script>
@@ -1097,6 +1097,14 @@ beeline&gt; 直接回车
 
 
 <!-- hexo injector body_end start -->
+<script src="/js/clock.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<script src="/js/search.js"></script>
+
+<script src="/js/webapp.js"></script>
+
 <script src="https://lib.baomitu.com/clipboard.js/2.0.8/clipboard.min.js"></script>
 
 <script src="/lib/codeBlock/codeBlockFuction.js"></script>
@@ -1108,14 +1116,6 @@ beeline&gt; 直接回车
 <script src="/lib/codeBlock/codeShrink.js"></script>
 
 <link rel="stylesheet" href="/lib/codeBlock/matery.css">
-
-<script src="/js/clock.js"></script>
-
-<script src="/js/webapp.js"></script>
-
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-
-<script src="/js/search.js"></script>
 <!-- hexo injector body_end end --></body>
 </html>
 
