@@ -35,7 +35,7 @@
 <meta property="og:image" content="http://example.com/2023/09/05/shixi/s10.png">
 <meta property="og:image" content="http://example.com/2023/09/05/shixi/s11.png">
 <meta property="article:published_time" content="2023-09-05T02:51:25.425Z">
-<meta property="article:modified_time" content="2023-09-05T07:55:12.399Z">
+<meta property="article:modified_time" content="2023-09-11T08:58:00.991Z">
 <meta property="article:author" content="puyiping">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/2023/09/05/shixi/s1.png">
@@ -47,7 +47,7 @@
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_8z08qcz5sq3.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1693901368732">
+  <link rel="stylesheet" href="/css/style.css?v=1694422737694">
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -207,8 +207,8 @@
 
         <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2023年09月05日</a>
-    <a><i class="nexmoefont icon-areachart"></i>786 字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 4 分钟</a>
+    <a><i class="nexmoefont icon-areachart"></i>1.9k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 10 分钟</a>
 </div>
 
         <div class="nexmoe-post-right">
@@ -385,7 +385,149 @@ private String name2;
 <p><strong>网页效果</strong></p>
 <p><img data-fancybox="gallery" data-sizes="auto" data-src="s10.png" alt="shixi" class="lazyload"></p>
 <p><img data-fancybox="gallery" data-sizes="auto" data-src="s11.png" alt="shixi" class="lazyload"></p>
-<h2 id="java网页接口制作与对接"><a href="#java网页接口制作与对接" class="headerlink" title="java网页接口制作与对接"></a>java网页接口制作与对接</h2>
+<h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><h3 id="细线表格"><a href="#细线表格" class="headerlink" title="细线表格"></a>细线表格</h3><p>1.在<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=table%E6%A0%87%E7%AD%BE&spm=1001.2101.3001.7020">table标签</a>上添加 2个属性，分别是：cellspacing&#x3D;”1” bgcolor&#x3D;”#000000” ，关键点：利用 内框宽度cellspacing</p>
+<p>2.在tr标签上添加1个属性，是：bgcolor&#x3D;”#ffffff”</p>
+<pre><code class="html">&lt;table width=&quot;40px&quot; border=&quot;0&quot; cellspacing=&quot;1&quot;  bgcolor=&quot;#000000&quot; cellpadding=&quot;1&quot;&gt;
+  &lt;tbody&gt;
+    &lt;tr bgcolor=&quot;#ffffff&quot;&gt;
+      &lt;td height=&quot;10px&quot; width=&quot;10px&quot;&gt;&lt;/td&gt;
+    &lt;td height=&quot;10px&quot; width=&quot;10px&quot;&gt;&lt;/td&gt;
+        &lt;td height=&quot;10px&quot; width=&quot;10px&quot;&gt;&lt;/td&gt;
+        &lt;td height=&quot;10px&quot; width=&quot;10px&quot;&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+<p>触发onClick事件</p>
+<pre><code class="javascript">    &lt;script&gt;
+        function luozi()
+    &#123;
+        
+        alert(&quot;密码为纯数字组合&quot;);
+        
+    &#125;
+&lt;/script&gt;
+</code></pre>
+<p>输出日期</p>
+<pre><code class="javascript">&lt;button type=&quot;button&quot; onclick=&quot;displayDate()&quot;&gt;显示日期&lt;/button&gt;
+</code></pre>
+<p>用js输出文本(Date())</p>
+<pre><code class="javascript">document.write(Date());
+</code></pre>
+<p>用js修改html中的文本</p>
+<pre><code class="javascript">document.getElementById(&quot;id&quot;).innerHTML=&quot;段落已修改。&quot;;
+</code></pre>
+<p>&#x3D;&#x3D;注：innerHTML(“id”)   必须在   id   的下方。😶&#x3D;&#x3D;</p>
+<p>导入保存在名为 “myscript.js” 的外部文件中的js：</p>
+<pre><code class="javascript">&lt;script src=&quot;/statics/demosource/myscript.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p>&#x3D;&#x3D;注：id、function命名必须是以英文开头。&#x3D;&#x3D;😂</p>
+<h4 id="lt-script-gt-标签"><a href="#lt-script-gt-标签" class="headerlink" title="&lt;script&gt; 标签"></a><code>&lt;script&gt;</code> 标签</h4><p>如需在 HTML 页面中插入 JavaScript，请使用 <script> 标签。<br><code>&lt;script&gt;</code>和<code>&lt;/script&gt;</code> 会告诉 JavaScript 在何处开始和结束。<br><code>&lt;script&gt; </code>和<code> &lt;/script&gt;</code> 之间的代码行包含了 JavaScript。</p>
+<h4 id="在-lt-head-gt-或者-lt-body-gt-的JavaScript"><a href="#在-lt-head-gt-或者-lt-body-gt-的JavaScript" class="headerlink" title="在 &lt;head&gt; 或者 &lt;body&gt; 的JavaScript"></a>在 <code>&lt;head&gt;</code> 或者 <code>&lt;body&gt;</code> 的JavaScript</h4><p>可以在 HTML 文档中放入不限数量的脚本。</p>
+<p>脚本可位于 HTML 的 <code>&lt;body&gt;</code> 或 <code>&lt;head&gt;</code> 部分中，或者同时存在于两个部分中。</p>
+<p>通常的做法是把函数放入 <code>&lt;head&gt;</code> 部分中，或者放在页面底部。这样就可以把它们安置到同一处位置，不会干扰页面的内容。</p>
+<h4 id="申明一个变量，然后执行出来"><a href="#申明一个变量，然后执行出来" class="headerlink" title="申明一个变量，然后执行出来"></a>申明一个变量，然后执行出来</h4><pre><code class="javascript">&lt;script&gt;
+var name;
+name=&quot;Hege&quot;;
+document.write(firstname);
+//document.write(&quot;&lt;br&gt;&quot;);
+//name=&quot;jason&quot;;
+//document.write(name);
+&lt;/script&gt;
+</code></pre>
+<h4 id="If语句"><a href="#If语句" class="headerlink" title="If语句"></a>If语句</h4><pre><code>if（）&#123;
+XXXX；
+&#125;
+else&#123;
+XXXX;
+&#125;
+</code></pre>
+<h4 id="随机语句"><a href="#随机语句" class="headerlink" title="随机语句"></a>随机语句</h4><pre><code class="javascript">var r=Math.random();
+var x=document.getElementById(&quot;demo&quot;)
+    if (r&gt;0.5)
+&#123;
+x.innerHTML=&quot;pypnb&quot;;
+&#125;
+else
+&#123;
+x.innerHTML=&quot;pyp&quot;;
+&#125;
+</code></pre>
+<h4 id="switch语句"><a href="#switch语句" class="headerlink" title="switch语句"></a>switch语句</h4><pre><code class="javascript">//var a.random();
+switch (a)
+&#123;
+      case 0:XX;break;
+      case 1:XX;break;
+      case 2:XX;break;
+      case 3:XX;break;
+&#125;
+</code></pre>
+<h4 id="警告框（Alert）"><a href="#警告框（Alert）" class="headerlink" title="警告框（Alert）"></a>警告框（Alert）</h4><pre><code class="javascript">alert(&quot;hhhh\nhoooooo!&quot;);  //使用\n来换行
+</code></pre>
+<h4 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h4><pre><code class="javascript">var x=&quot;&quot;,i;
+for (i=0;i&lt;5;i++)
+  &#123;
+  x=x + &quot;The number is &quot; + i + &quot;&lt;br&gt;&quot;;   
+     //	if (i==3)&#123;   //continue语句
+     //	continue;
+    //&#125;    
+    
+     //	if (i==3)&#123;    //break语句
+        //		break;
+        //	&#125;
+  
+  &#125;
+</code></pre>
+<p>==注：如果循环中有<code>&quot;&quot;</code>，则需要在<code>&quot;&quot;</code>前添加转义字符<code>\</code>==😂🙃</p>
+<pre><code class="javascript">     &lt;script&gt;
+     var i,j;
+            for(i=1;i&lt;=10;i++)&#123;
+                document.getElementById(&quot;demo&quot;).innerHTML=&quot;&lt;tr bgcolor=\&quot;#ffffff\&quot;&gt;&quot;;
+                               for(j=1;j&lt;=10;j++)&#123;
+                    document.write(&quot;&lt;td height=\&quot;30px\&quot; width=\&quot;30px\&quot;&gt;&quot;+&quot;&lt;/td&gt;&quot;);
+                &#125;document.getElementById(&quot;demo&quot;).innerHTML=&quot;&lt;/tr&gt;&quot;;
+            &#125;
+    &lt;/script&gt;
+    &lt;body&gt;
+    &lt;div class=&quot;1&quot;  align=&quot;center&quot; style=&quot;height: 30px&quot;&gt;10路五子棋&lt;/div&gt;
+    &lt;table  id=&quot;demo&quot; width=&quot;260px&quot; border=&quot;0&quot; align=&quot;center&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot;  bgcolor=&quot;#000000&quot;&gt;&lt;/table&gt;		
+
+&lt;/body&gt;
+</code></pre>
+<h4 id="导入外部js"><a href="#导入外部js" class="headerlink" title="导入外部js"></a>导入外部js</h4><pre><code class="javascript">&lt;script src=&quot;.\xxx.js&quot;&gt;&lt;/script&gt;  
+//路径也可以为网页。
+</code></pre>
+<h4 id="返回字符串长度"><a href="#返回字符串长度" class="headerlink" title="返回字符串长度"></a>返回字符串长度</h4><pre><code class="javascript">document.write(txt.length);
+</code></pre>
+<h4 id="返回字符串文本首次出现位置"><a href="#返回字符串文本首次出现位置" class="headerlink" title="返回字符串文本首次出现位置"></a>返回字符串文本首次出现位置</h4><pre><code class="javascript">var str=&quot;Hello world, welcome to the universe.&quot;;
+var n=str.indexOf(&quot;welcome&quot;);
+//结果返回13
+</code></pre>
+<h4 id="查找字符串中特定的字符，若找到，则返回该字符"><a href="#查找字符串中特定的字符，若找到，则返回该字符" class="headerlink" title="查找字符串中特定的字符，若找到，则返回该字符"></a>查找字符串中特定的字符，若找到，则返回该字符</h4><pre><code class="javascript">&lt;script&gt;
+var str=&quot;Hello world!&quot;;
+document.write(str.match(&quot;world&quot;) + &quot;&lt;br&gt;&quot;);
+document.write(str.match(&quot;World&quot;) + &quot;&lt;br&gt;&quot;);
+document.write(str.match(&quot;worlld&quot;) + &quot;&lt;br&gt;&quot;);
+document.write(str.match(&quot;world!&quot;));
+&lt;/script&gt;
+</code></pre>
+<h4 id="替换字符串中的字符"><a href="#替换字符串中的字符" class="headerlink" title="替换字符串中的字符"></a>替换字符串中的字符</h4><pre><code class="javascript">function myFunction()
+&#123;
+var str=document.getElementById(&quot;ID&quot;).innerHTML; 
+var n=str.replace(&quot;原文&quot;,&quot;替换的文字&quot;);
+document.getElementById(&quot;ID&quot;).innerHTML=n;
+&#125;
+</code></pre>
+<h3 id="JS-对-JSON的操作总结"><a href="#JS-对-JSON的操作总结" class="headerlink" title="JS 对 JSON的操作总结"></a>JS 对 JSON的操作总结</h3><hr>
+<p>JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式，采用完全独立于语言的文本格式，是理想的数据交换格式。同时，JSON是 JavaScript 原生格式，这意味着在 JavaScript 中处理 JSON数据不须要任何特殊的 API 或工具包。</p>
+<p> 在JSON中，有两种结构：对象和数组。</p>
+<p><strong>1.对象</strong></p>
+<p>一个对象以“{”开始，“}”结束。每个“key”后跟一“:”，“‘key/value’ 对”之间运用 “,”分隔。</p>
+<p>packJson = {"name":"nikita", "password":"1111"}</p>
+<p><strong>2.数组</strong></p>
+<p>packJson = [{"name":"nikita", "password":"1111"}, {"name":"tony", "password":"2222"}];</p>
+<p>数组是值的有序集合。一个数组以“[”开始，“]”结束。值之间运用 “,”分隔。</p>
+<h2 id="java网页接口制作与对接"><a href="#java网页接口制作与对接" class="headerlink" title="java网页接口制作与对接"></a>java网页接口制作与对接</h2></script></p>
         </article>
 
         
@@ -1137,7 +1279,7 @@ private String name2;
 <script src="/lib/fancybox/js/jquery.fancybox.min.js"></script>
 
 
-<script src="/js/app.js?v=1693901368734"></script>
+<script src="/js/app.js?v=1694422737695"></script>
 
 <script src="https://lib.baomitu.com/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
 <script>
@@ -1156,12 +1298,6 @@ private String name2;
 <!-- hexo injector body_end start -->
 <script src="/js/clock.js"></script>
 
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-
-<script src="/js/search.js"></script>
-
-<script src="/js/webapp.js"></script>
-
 <script src="https://lib.baomitu.com/clipboard.js/2.0.8/clipboard.min.js"></script>
 
 <script src="/lib/codeBlock/codeBlockFuction.js"></script>
@@ -1173,6 +1309,12 @@ private String name2;
 <script src="/lib/codeBlock/codeShrink.js"></script>
 
 <link rel="stylesheet" href="/lib/codeBlock/matery.css">
+
+<script src="/js/webapp.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<script src="/js/search.js"></script>
 <!-- hexo injector body_end end --></body>
 </html>
 
