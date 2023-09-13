@@ -23,10 +23,13 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="我的实习2">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2023/09/12/shixi2/.%5Cshixi2%5C1.png">
+<meta property="og:image" content="http://example.com/2023/09/12/shixi2/.%5Cshixi2%5C2.png">
 <meta property="article:published_time" content="2023-09-12T01:09:27.581Z">
-<meta property="article:modified_time" content="2023-09-12T01:11:46.771Z">
+<meta property="article:modified_time" content="2023-09-13T09:10:40.970Z">
 <meta property="article:author" content="puyiping">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2023/09/12/shixi2/.%5Cshixi2%5C1.png">
   <link rel="stylesheet" href="https://lib.baomitu.com/highlight.js/9.15.8/styles/atom-one-dark.min.css" crossorigin>
   <link rel="stylesheet" href="/lib/mdui_043tiny/css/mdui.css">
   <link rel="stylesheet" href="/lib/iconfont/iconfont.css">
@@ -35,7 +38,7 @@
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_8z08qcz5sq3.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1694481197801">
+  <link rel="stylesheet" href="/css/style.css?v=1694596855450">
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -195,8 +198,8 @@
 
         <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2023年09月12日</a>
-    <a><i class="nexmoefont icon-areachart"></i>354 字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+    <a><i class="nexmoefont icon-areachart"></i>1.9k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 9 分钟</a>
 </div>
 
         <div class="nexmoe-post-right">
@@ -237,6 +240,219 @@ for(var p in myJson)&#123;    //遍历json对象的每个key/value对,p为key
 运行结果：name nikita
         password 1111
 </code></pre>
+<h3 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery"></a>jQuery</h3><hr>
+<p>jQuery 是一个 JavaScript 库,简化了 JavaScript 编程，使得其很容易学习。</p>
+<hr>
+<h4 id="文档就绪事件"><a href="#文档就绪事件" class="headerlink" title="文档就绪事件"></a>文档就绪事件</h4><hr>
+<p>所有 jQuery 函数位于一个 document ready 函数中：</p>
+<pre><code class="js">$(document).ready(function()&#123;
+ 
+   // 开始写 jQuery 代码...
+ 
+&#125;);
+</code></pre>
+<p><em>load与ready的区别</em></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src=".%5Cshixi2%5C1.png" alt="shixi2" class="lazyload"></p>
+<p>&#x3D;&#x3D;注：jQuery 语法不是很严格；可以按照希望的格式来写，包含换行和缩进，系统会抛掉多余的空格，并当成一行长代码来执行上面的代码行。&#x3D;&#x3D;</p>
+<h4 id="jQuery-选择器"><a href="#jQuery-选择器" class="headerlink" title="jQuery 选择器"></a>jQuery 选择器</h4><pre><code class="javascript">&lt;script src=&quot;https://cdn.staticfile.org/jquery/2.0.0/jquery.min.js&quot;&gt;
+&lt;/script&gt;
+&lt;script&gt;
+$(document).ready(function()&#123;
+  $(&quot;button&quot;).click(function()&#123;
+    $(this).hide();   //隐藏当前的 HTML 元素。
+    // $(&quot;p&quot;).hide();  隐藏所有 &lt;p&gt; 元素
+     //$(&quot;.test&quot;).hide() 隐藏所有 class=&quot;test&quot; 的元素。
+    //$(&quot;#test&quot;).hide()   隐藏 id=&quot;test&quot; 的元素。
+$(&quot;#test&quot;).hide()
+  &#125;);
+&#125;);&lt;/script&gt;
+</code></pre>
+<h4 id="jQuery-事件"><a href="#jQuery-事件" class="headerlink" title="jQuery 事件"></a>jQuery 事件</h4><p> <strong>单击事件</strong></p>
+<pre><code class="javascript">$().click()&#123;&#125;
+</code></pre>
+<p><strong>双击事件</strong></p>
+<pre><code class="javascript">$().dblclick()&#123;&#125;
+</code></pre>
+<p><strong>鼠标移动事件</strong></p>
+<pre><code class="js">$(&quot;#p1&quot;).mouseenter(function()&#123;      //&quot;#p1&quot;为指定ID
+</code></pre>
+<p><strong>鼠标离开事件</strong></p>
+<pre><code class="js">$().mouseleave(function()&#123;
+</code></pre>
+<p><strong>jQuery 隐藏&#x2F;显示</strong></p>
+<pre><code class="js">$().click(function()&#123;&#125;);
+$().hind;
+$().click(function()&#123;&#125;);
+$().show;
+</code></pre>
+<p><strong>or</strong></p>
+<pre><code class="js">$().toggle();
+</code></pre>
+<h4 id="jQuery-淡入淡出"><a href="#jQuery-淡入淡出" class="headerlink" title="jQuery 淡入淡出"></a>jQuery 淡入淡出</h4><pre><code class="js">$().fadeIn();  //淡入
+</code></pre>
+<pre><code class="js">$().fadeOut();   //淡出
+</code></pre>
+<pre><code class="js">$().fadeToggle();   //切换
+</code></pre>
+<pre><code class="js"> $().slideDown();      //下滑
+</code></pre>
+<pre><code class="js"> $().slideUp();         //上滑
+</code></pre>
+<pre><code class="js">$().animate(&#123;
+   left:&#39;250px&#39;
+   //,height:&#39;150px&#39;,
+   //width:&#39;+=150px&#39;  每次点击都生效  
+&#125;);     //向左滑
+&lt;div style=&quot;position:absolute;&quot;&gt;&lt;/div&gt;
+</code></pre>
+<p>&#x3D;&#x3D;注：默认情况下，所有的 HTML 元素有一个静态的位置，且是不可移动的。 如果需要改变为，需要将元素的 position 属性设置为 relative, fixed, 或 absolute!&#x3D;&#x3D;😁</p>
+<pre><code class="js"> height:&#39;toggle&#39;    //单机开始，双击取消
+</code></pre>
+<p><strong>一次点击，4次执行</strong></p>
+<pre><code>$(&quot;button&quot;).click(function()&#123;
+    var div=$(&quot;div&quot;);
+    div.animate(&#123;height:&#39;300px&#39;,opacity:&#39;0.4&#39;&#125;,&quot;slow&quot;);
+    div.animate(&#123;width:&#39;300px&#39;,opacity:&#39;0.8&#39;&#125;,&quot;slow&quot;);
+    div.animate(&#123;height:&#39;100px&#39;,opacity:&#39;0.4&#39;&#125;,&quot;slow&quot;);
+    div.animate(&#123;width:&#39;100px&#39;,opacity:&#39;0.8&#39;&#125;,&quot;slow&quot;);
+  &#125;);
+</code></pre>
+<h4 id="停止动画"><a href="#停止动画" class="headerlink" title="停止动画"></a>停止动画</h4><pre><code class="js">$().stop();
+</code></pre>
+<h4 id="jQuery-HTML-获取-和-属性"><a href="#jQuery-HTML-获取-和-属性" class="headerlink" title="jQuery HTML 获取 和 属性"></a>jQuery HTML 获取 和 属性</h4><ol>
+<li>text() - 设置或返回所选元素的文本内容</li>
+<li>html() - 设置或返回所选元素的内容（包括 HTML 标记）</li>
+<li>val() - 设置或返回表单字段的值</li>
+</ol>
+<p><strong>获取文本内容</strong></p>
+<pre><code>$(&quot;#test&quot;).text()
+</code></pre>
+<p><strong>获取网页内容</strong></p>
+<pre><code>$(&quot;#test&quot;).html()
+</code></pre>
+<p><strong>获取表单的字段值。</strong></p>
+<pre><code> $(&quot;#test&quot;).val()
+</code></pre>
+<p><strong>获取属性值</strong></p>
+<pre><code>$(&quot;#runoob&quot;).attr(&quot;href&quot;)
+</code></pre>
+<p><strong>设置内容与属性</strong></p>
+<p>通过 append() 和 prepend() 方法添加若干新元素</p>
+<pre><code class="js">$(&quot;p&quot;).append(&quot; &lt;b&gt;追加文本&lt;/b&gt;。&quot;);
+</code></pre>
+<p>append() 和 prepend() 方法能够通过参数接收无限数量的新元素。可以通过 jQuery 来生成文本&#x2F;HTML。</p>
+<hr>
+<hr>
+<p>我们创建若干个新元素。这些元素可以通过 text&#x2F;HTML、jQuery 或者 JavaScript&#x2F;DOM 来创建。然后我们通过 append() 方法把这些新元素追加到文本中（对 prepend() 同样有效）：</p>
+<pre><code class="js">function appendText()&#123;
+    var txt1=&quot;&lt;p&gt;文本-1。&lt;/p&gt;&quot;;              // 使用 HTML 标签创建文本
+    var txt2=$(&quot;&lt;p&gt;&lt;/p&gt;&quot;).text(&quot;文本-2。&quot;);  // 使用 jQuery 创建文本
+    var txt3=document.createElement(&quot;p&quot;);
+    txt3.innerHTML=&quot;文本-3。&quot;;               // 使用 DOM 创建文本 text with DOM
+    $(&quot;body&quot;).append(txt1,txt2,txt3);        // 追加新元素
+&#125;
+</code></pre>
+<hr>
+<p>Query after() 方法在被选元素之后插入内容。</p>
+<p>jQuery before() 方法在被选元素之前插入内容。</p>
+<pre><code class="js">$(&quot;img&quot;).after(&quot;在后面添加文本&quot;);
+$(&quot;img&quot;).before(&quot;在前面添加文本&quot;);
+</code></pre>
+<hr>
+<pre><code class="js">function afterText()
+&#123;
+    var txt1=&quot;&lt;b&gt;I &lt;/b&gt;&quot;;                    // 使用 HTML 创建元素
+    var txt2=$(&quot;&lt;i&gt;&lt;/i&gt;&quot;).text(&quot;love &quot;);     // 使用 jQuery 创建元素
+    var txt3=document.createElement(&quot;big&quot;);  // 使用 DOM 创建元素
+    txt3.innerHTML=&quot;jQuery!&quot;;
+    $(&quot;img&quot;).after(txt1,txt2,txt3);          // 在图片后添加文本
+&#125;
+</code></pre>
+<hr>
+<ul>
+<li>remove() - 删除被选元素（及其子元素）</li>
+<li>empty() - 从被选元素中删除子元素</li>
+</ul>
+<hr>
+<pre><code class="javascript">$(&quot;p&quot;).remove(&quot;文本&quot;);
+</code></pre>
+<hr>
+<p><strong>jQuery 操作 CSS</strong></p>
+<ol>
+<li>addClass() - 向被选元素添加一个或多个类</li>
+<li>removeClass() - 从被选元素删除一个或多个类</li>
+<li>toggleClass() - 对被选元素进行添加&#x2F;删除类的切换操作</li>
+<li>css() - 设置或返回样式属性</li>
+</ol>
+<p><strong>设置多个 CSS 属性</strong></p>
+<pre><code class="js">css(&#123;&quot;propertyname&quot;:&quot;value&quot;,&quot;propertyname&quot;:&quot;value&quot;,...&#125;);
+</code></pre>
+<p><strong>为所有匹配元素设置 background-color 和 font-size：</strong></p>
+<pre><code class="js">$(&quot;p&quot;).css(&#123;&quot;background-color&quot;:&quot;yellow&quot;,&quot;font-size&quot;:&quot;200%&quot;&#125;);
+</code></pre>
+<hr>
+<p>jQuery 提供多个处理尺寸的重要方法：</p>
+<ol>
+<li>width()</li>
+<li>height()</li>
+<li>innerWidth()</li>
+<li>innerHeight()</li>
+<li>outerWidth()</li>
+<li>outerHeight()</li>
+</ol>
+<hr>
+<p>width() 方法设置或返回元素的宽度（不包括内边距、边框或外边距）。</p>
+<p>height() 方法设置或返回元素的高度（不包括内边距、边框或外边距）。</p>
+<p>下面的例子返回指定的 <div> 元素的宽度和高度：</div></p>
+<pre><code class="js">$(&quot;button&quot;).click(function()&#123;
+  var txt=&quot;&quot;;
+  txt+=&quot;div 的宽度是: &quot; + $(&quot;#div1&quot;).width() + &quot;&lt;/br&gt;&quot;;
+  txt+=&quot;div 的高度是: &quot; + $(&quot;#div1&quot;).height();
+  $(&quot;#div1&quot;).html(txt);
+&#125;);
+</code></pre>
+<p>innerWidth() 方法返回元素的宽度（包括内边距）。</p>
+<p>innerHeight() 方法返回元素的高度（包括内边距）。</p>
+<p>outerWidth() 方法返回元素的宽度（包括内边距和边框）。</p>
+<p>outerHeight() 方法返回元素的高度（包括内边距和边框）。</p>
+<h4 id="jQuery-遍历"><a href="#jQuery-遍历" class="headerlink" title="jQuery 遍历"></a>jQuery 遍历</h4><hr>
+<p>jQuery 遍历，意为”移动”，用于根据其相对于其他元素的关系来”查找”（或选取）HTML 元素。以某项选择开始，并沿着这个选择移动，直到抵达您期望的元素为止。</p>
+<p>下图展示了一个家族树。通过 jQuery 遍历，您能够从被选（当前的）元素开始，轻松地在家族树中向上移动（祖先），向下移动（子孙），水平移动（同胞）。这种移动被称为对 DOM 进行遍历。</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src=".%5Cshixi2%5C2.png" alt="shixi2" class="lazyload"></p>
+<p>图示解析：</p>
+<ol>
+<li><div> 元素是 <ul> 的父元素，同时是其中所有内容的祖先。</ul></div></li>
+<li><ul> 元素是 <li> 元素的父元素，同时是 <div> 的子元素</div></li>
+<li>左边的 </li><li> 元素是 <span> 的父元素，<ul> 的子元素，同时是 <div> 的后代。</div></ul></span></li>
+<li><span> 元素是 <li> 的子元素，同时是 <ul> 和 <div> 的后代。</div></ul></li>
+<li>两个 </li><li> 元素是同胞（拥有相同的父元素）。</li>
+<li>右边的 </li><li> 元素是 <b> 的父元素，<ul> 的子元素，同时是 <div> 的后代。</div></ul></b></li>
+<li><b> 元素是右边的 <li> 的子元素，同时是 <ul> 和 <div> 的后代。</div></ul></li>
+</b></li></span></li></ul></li></ol>
+<hr>
+<p><strong>向上遍历 DOM 树</strong></p>
+<ul>
+<li>parent()</li>
+<li>parents()</li>
+<li>parentsUntil()</li>
+</ul>
+<hr>
+<p><strong>用于向下遍历 DOM 树的 jQuery 方法：</strong></p>
+<ul>
+<li>children()</li>
+<li>find()</li>
+</ul>
+<hr>
+<p><strong>在 DOM 树中水平遍历</strong></p>
+<ol>
+<li>siblings()</li>
+<li>next()</li>
+<li>nextAll()</li>
+<li>nextUntil()</li>
+<li>prev()</li>
+<li>prevAll()</li>
+<li>prevUntil()</li>
+</ol>
 <h2 id="java网页接口制作与对接"><a href="#java网页接口制作与对接" class="headerlink" title="java网页接口制作与对接"></a>java网页接口制作与对接</h2>
         </article>
 
@@ -989,7 +1205,7 @@ for(var p in myJson)&#123;    //遍历json对象的每个key/value对,p为key
 <script src="/lib/fancybox/js/jquery.fancybox.min.js"></script>
 
 
-<script src="/js/app.js?v=1694481197803"></script>
+<script src="/js/app.js?v=1694596855452"></script>
 
 <script src="https://lib.baomitu.com/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
 <script>
@@ -1006,9 +1222,7 @@ for(var p in myJson)&#123;    //遍历json对象的每个key/value对,p为key
 
 
 <!-- hexo injector body_end start -->
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-
-<script src="/js/search.js"></script>
+<script src="/js/clock.js"></script>
 
 <script src="https://lib.baomitu.com/clipboard.js/2.0.8/clipboard.min.js"></script>
 
@@ -1022,9 +1236,11 @@ for(var p in myJson)&#123;    //遍历json对象的每个key/value对,p为key
 
 <link rel="stylesheet" href="/lib/codeBlock/matery.css">
 
-<script src="/js/clock.js"></script>
-
 <script src="/js/webapp.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<script src="/js/search.js"></script>
 <!-- hexo injector body_end end --></body>
 </html>
 
