@@ -23,10 +23,12 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="我的实习3">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2023/09/20/shixi3/4-1Z220153J2254.gif">
 <meta property="article:published_time" content="2023-09-20T08:54:41.373Z">
-<meta property="article:modified_time" content="2023-09-20T11:33:33.062Z">
+<meta property="article:modified_time" content="2023-10-10T10:03:00.221Z">
 <meta property="article:author" content="puyiping">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2023/09/20/shixi3/4-1Z220153J2254.gif">
   <link rel="stylesheet" href="https://lib.baomitu.com/highlight.js/9.15.8/styles/atom-one-dark.min.css" crossorigin>
   <link rel="stylesheet" href="/lib/mdui_043tiny/css/mdui.css">
   <link rel="stylesheet" href="/lib/iconfont/iconfont.css">
@@ -35,7 +37,7 @@
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_8z08qcz5sq3.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1695210040652">
+  <link rel="stylesheet" href="/css/style.css?v=1696987842971">
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -195,8 +197,8 @@
 
         <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2023年09月20日</a>
-    <a><i class="nexmoefont icon-areachart"></i>6 字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+    <a><i class="nexmoefont icon-areachart"></i>5.4k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 23 分钟</a>
 </div>
 
         <div class="nexmoe-post-right">
@@ -207,7 +209,450 @@
             <p>我的实习3</p>
 <span id="more"></span>
 
-<h1 id="hhhhhh"><a href="#hhhhhh" class="headerlink" title="hhhhhh"></a>hhhhhh</h1><p>acbjhbcabajs</p>
+<h1 id="mysql的入门"><a href="#mysql的入门" class="headerlink" title="mysql的入门"></a>mysql的入门</h1><hr>
+<p>为什么需要数据库？</p>
+<p>因为应用程序需要保存用户的数据，比如Word需要把用户文档保存起来，以便下次继续编辑或者拷贝到另一台电脑。</p>
+<p>要保存用户的数据，一个最简单的方法是把用户数据写入文件。例如，要保存一个班级所有学生的信息，可以向文件中写入一个CSV文件：</p>
+<pre><code class="csv">id,name,gender,score
+1,小明,M,90
+2,小红,F,95
+3,小军,M,88
+4,小丽,F,88
+</code></pre>
+<p>但是，随着应用程序的功能越来越复杂，数据量越来越大，如何管理这些数据就成了大问题：</p>
+<ol>
+<li>读写文件并解析出数据需要大量重复代码。</li>
+<li>从成千上万的数据中快速查询出指定数据需要复杂的逻辑。</li>
+<li>每个应用程序都各自写自己的读写数据的代码，一方面效率低，容易出错。</li>
+<li>每个应用程序访问数据的接口都不相同，数据难以复用。</li>
+</ol>
+<hr>
+<p>数据库作为一种专门管理数据的软件就出现了。 应用程序不需要自己管理数据，而是通过数据库软件提供的接口来读写数据。 至于数据本身如何存储到文件，那是数据库软件的事情，应用程序自己并不关心：</p>
+<pre><code class="ascii">┌──────────────┐
+│ application  │
+└──────────────┘
+       ▲│
+       ││
+   read││write
+       ││
+       │▼
+┌──────────────┐
+│   database   │
+└──────────────┘
+</code></pre>
+<hr>
+<p>数据库一共有三种模型：</p>
+<ul>
+<li>层次模型</li>
+<li>网状模型</li>
+<li>关系模型</li>
+</ul>
+<h2 id="数据库系统"><a href="#数据库系统" class="headerlink" title="数据库系统"></a>数据库系统</h2><blockquote>
+<p>数据库系统（Database System，DBS）由硬件和软件共同构成。硬件主要用于存储数据库中的数据，包括计算机、存储设备等。软件部分主要包括数据库管理系统、支持数据库管理系统运行的操作系统，以及支持多种语言进行应用开发的访问技术等。</p>
+</blockquote>
+<hr>
+<h3 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h3><p>数据库系统是指在计算机系统中引入数据库后的系统。完整的数据库系统结构关系如图所示：</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="4-1Z220153J2254.gif" alt="shixi3" class="lazyload"></p>
+<p>一个完整的数据库系统一般由数据库、数据库管理系统、应用开发工具、应用系统、数据库管理员和用户组成。</p>
+<hr>
+<p>数据库系统主要有以下 3 个组成部分：</p>
+<ol>
+<li>数据库：用于存储数据的地方。</li>
+<li>数据库管理系统：用于管理数据库的软件。</li>
+<li>数据库应用程序：为了提高数据库系统的处理能力所使用的管理数据库库的软件补充。</li>
+</ol>
+<p><strong>数据库（DataBase，DB）</strong>提供了一个存储空间来存储各种数据，可以将数据库视为一个存储数据的容器。一个数据库可能包含许多文件，一个数据库系统中通常包含许多数据库。</p>
+<p><strong>数据库管理系统（Database Management System，DBMS）</strong>是用户创建、管理和维护数据库时所使用的软件，位于用户和操作系统之间，对数据库进行统一管理。DBMS 能定义数据存储结构，提供数据的操作机制，维护数据库的安全性、完整性和可靠性。</p>
+<p>虽然已经有了 DBMS，但是在很多情况下，DBMS 无法满足对数据管理的要求。</p>
+<p><strong>数据库应用程序（DataBase Application）</strong>的使用可以满足对数据管理的更高要求，还可以使数据管理过程更加直观和友好。数据库应用程序负责与 DBMS 进行通信、访问和管理 DBMS 中存储的数据，允许用户插入、修改、删除数据库中的数据。</p>
+<hr>
+<h3 id="DBMS"><a href="#DBMS" class="headerlink" title="DBMS"></a>DBMS</h3><h4 id="1-数据定义功能"><a href="#1-数据定义功能" class="headerlink" title="1) 数据定义功能"></a>1) 数据定义功能</h4><p>DBMS 提供数据定义语言（Data Definition Language，DDL），用户通过它可以方便地对数据库中的数据对象进行定义。</p>
+<h4 id="2-数据操纵功能"><a href="#2-数据操纵功能" class="headerlink" title="2) 数据操纵功能"></a>2) 数据操纵功能</h4><p>DBMS 还提供数据操纵语言（Data Manipulation Language，DML），用户可以使用 DML 操作数据，实现对数据库的基本操作，如查询、插入、删除和修改等。</p>
+<h4 id="3-数据库的运行管理"><a href="#3-数据库的运行管理" class="headerlink" title="3) 数据库的运行管理"></a>3) 数据库的运行管理</h4><p>数据库在建立、运用和维护时由数据库管理系统统一管理、统一控制，以保证数据的安全性、完整性、多用户对数据的并发使用及发生故障后的系统恢复。例如：</p>
+<ol>
+<li>数据的完整性检查功能保证用户输入的数据应满足相应的约束条件；</li>
+<li>数据库的安全保护功能保证只有赋予权限的用户才能访问数据库中的数据；</li>
+<li>数据库的并发控制功能使多个用户可以在同一时刻并发地访问数据库的数据；</li>
+<li>数据库系统的故障恢复功能使数据库运行出现故障时可以进行数据库恢复，以保证数据库可靠地运行。</li>
+</ol>
+<h4 id="4-提供方便、有效地存取数据库信息的接口和工具"><a href="#4-提供方便、有效地存取数据库信息的接口和工具" class="headerlink" title="4) 提供方便、有效地存取数据库信息的接口和工具"></a>4) 提供方便、有效地存取数据库信息的接口和工具</h4><p>编程人员可通过编程语言与数据库之间的接口进行数据库应用程序的开发。数据库管理员（Database Administrator，DBA）可通过提供的工具对数据库进行管理。</p>
+<h4 id="5-数据库的建立和维护功能"><a href="#5-数据库的建立和维护功能" class="headerlink" title="5) 数据库的建立和维护功能"></a>5) 数据库的建立和维护功能</h4><p>数据库功能包括数据库初始数据的输入、转换功能，数据库的转储、恢复功能，数据库的重组织功能和性能监控、分析功能等。这些功能通常由一些使用程序来完成。</p>
+<h1 id="MYSQL的基本操作"><a href="#MYSQL的基本操作" class="headerlink" title="MYSQL的基本操作"></a>MYSQL的基本操作</h1><!--MySQL 安装好之后就可以进行数据库的相关操作了。数据库就像车库一样，每一个小区里都有很多车库用来存放车，它们都有唯一的车库号。同样，在 MySQL 中也可以创建多个不同名称的数据库存储数据。-->
+
+<p>SQL 具有如下优点。</p>
+<ol>
+<li>一体化：SQL 集数据定义、数据操作和数据控制于一体，可以完成数据库中的全部工作。</li>
+<li>使用方式灵活：SQL 具有两种使用方式，可以直接以命令方式交互使用；也可以嵌入使用，嵌入C、C++、Fortran、COBOL、Java 等语言中使用。</li>
+<li>非过程化：只提操作要求，不必描述操作步骤，也不需要导航。使用时只需要告诉计算机“做什么”，而不需要告诉它“怎么做”，存储路径的选择和操作的执行由数据库管理系统自动完成。</li>
+<li>语言简洁、语法简单：该语言的语句都是由描述性很强的英语单词组成，而且这些单词的数目不多。</li>
+</ol>
+<hr>
+<h3 id="SQL4种常见操作："><a href="#SQL4种常见操作：" class="headerlink" title="SQL4种常见操作："></a>SQL4种常见操作：</h3><h4 id="1）数据定义语言（Data-Definition-Language，DDL）"><a href="#1）数据定义语言（Data-Definition-Language，DDL）" class="headerlink" title="1）数据定义语言（Data Definition Language，DDL）"></a>1）数据定义语言（Data Definition Language，DDL）</h4><p>用来创建或删除数据库以及表等对象，主要包含以下几种命令：</p>
+<ul>
+<li>DROP：删除数据库和表等对象</li>
+<li>CREATE：创建数据库和表等对象</li>
+<li>ALTER：修改数据库和表等对象的结构</li>
+</ul>
+<h4 id="2）数据操作语言（Data-Manipulation-Language，DML）"><a href="#2）数据操作语言（Data-Manipulation-Language，DML）" class="headerlink" title="2）数据操作语言（Data Manipulation Language，DML）"></a>2）数据操作语言（Data Manipulation Language，DML）</h4><p>用来变更表中的记录，主要包含以下几种命令：</p>
+<ul>
+<li>SELECT：查询表中的数据</li>
+<li>INSERT：向表中插入新数据</li>
+<li>UPDATE：更新表中的数据</li>
+<li>DELETE：删除表中的数据</li>
+</ul>
+<h4 id="3）数据查询语言（Data-Query-Language，DQL）"><a href="#3）数据查询语言（Data-Query-Language，DQL）" class="headerlink" title="3）数据查询语言（Data Query Language，DQL）"></a>3）数据查询语言（Data Query Language，DQL）</h4><p>用来查询表中的记录，主要包含 SELECT 命令，来查询表中的数据。</p>
+<h4 id="4）数据控制语言（Data-Control-Language，DCL）"><a href="#4）数据控制语言（Data-Control-Language，DCL）" class="headerlink" title="4）数据控制语言（Data Control Language，DCL）"></a>4）数据控制语言（Data Control Language，DCL）</h4><p>用来确认或者取消对数据库中的数据进行的变更。除此之外，还可以对数据库中的用户设定权限。主要包含以下几种命令：</p>
+<ul>
+<li>GRANT：赋予用户操作权限</li>
+<li>REVOKE：取消用户的操作权限</li>
+<li>COMMIT：确认对数据库中的数据进行的变更</li>
+<li>ROLLBACK：取消对数据库中的数据进行的变更</li>
+</ul>
+<p><strong>声明创建一个名叫 students 的表：</strong></p>
+<pre><code class="mysql">CREATE TABLE students (
+    student_id INT UNSIGNED,
+    name VARCHAR(30) ,
+    sex CHAR(1),
+    birth DATE,
+    PRIMARY KEY(student_id)
+);
+</code></pre>
+<p>该表包含 4 个字段，分别为 student_id、name、sex、birth，其中 student_id 定义为表的主键。</p>
+<hr>
+<p>现在只是定义了一张表格，但并没有任何数据，接下来这条 SQL 声明语句，将在 students 表中插入一条数据记录：</p>
+<pre><code class="mysql">INSERT INTO students (student_id, name, sex, birth)
+VALUES (41048101, &#39;C语言中文网MySQL教程&#39;, &#39;1&#39;, &#39;2013-02-14&#39;);
+</code></pre>
+<p>执行完该 SQL 语句之后，students 表中就会增加一行新记录，该记录中字段 student_id 的值为“41048101”，name 字段的值为“浦逸平”。sex 字段值为“1”，birth 字段值为“2013-04-15”。</p>
+<pre><code class="mysql">SELECT name FROM students WHERE student_id=204800139;
++--------------+
+| name         |
++--------------+
+| 浦逸平        |
++--------------+
+</code></pre>
+<h1 id="SQL的基本书写规则"><a href="#SQL的基本书写规则" class="headerlink" title="SQL的基本书写规则"></a>SQL的基本书写规则</h1><p>在 RDBMS （关系型数据库）当中，SQL 语句是逐条执行的，一条 SQL 语句代表着数据库的一个操作。</p>
+<p>我们通常在句子的句尾加注标点表示这句话结束，中文句子以句号<code>。</code>结尾，英文以点号<code>.</code>结尾，而 SQL 语句则使用英文分号<code>;</code>结尾。</p>
+<p><strong>SQL 语句不区分大小写</strong></p>
+<p>SQL 不区分<strong>关键字</strong>(<em>数据库事先定义的，有特别意义的单词。</em>)的大小写</p>
+<blockquote>
+<p>为了理解起来更加容易，一般使用以下规则来书写 SQL 语句。</p>
+</blockquote>
+<ol>
+<li>关键字大写</li>
+<li>数据库名、表名和列名等小写</li>
+</ol>
+<p>下表总结了 SQL 元素在 Windows 和 Linux 系统是否区分大小写。</p>
+<table>
+<tbody>
+<tr>
+<th>&nbsp;</th>
+<th>Windows</th>
+<th>Linux</th>
+</tr>
+<tr>
+<th>数据库名</th>
+<td rowspan="6">否（忽略大小写）</td>
+<td>是</td>
+</tr>
+<tr>
+<th>表名</th>
+<td>是</td>
+</tr>
+<tr>
+<th>表别名</th>
+<td>是</td>
+</tr>
+<tr>
+<th>列名</th>
+<td>否（忽略大小写）</td>
+</tr>
+<tr>
+<th>列别名</th>
+<td>否（忽略大小写）</td>
+</tr>
+<tr>
+<th>变量名</th>
+<td>是</td>
+</tr>
+</tbody>
+</table>
+==注：插入到表中的数据是区分大小写的。😂==
+
+<p><strong>常数的书写方式是固定的</strong></p>
+<p>SQL 语句常常需要直接书写字符串、日期或者数字。例如，书写向表中插入字符串、日期或者数字等数据的 SQL 语句。</p>
+<p>在 SQL 语句中直接书写的字符串、日期或者数字等称为常数。常数的书写方式如下所示：</p>
+<ol>
+<li>SQL 语句中含有字符串的时候，需要像 ‘abc’ 这样，使用英文单引号<code>&#39;</code>将字符串括起来，用来标识这是一个字符串。</li>
+<li>SQL 语句中含有日期的时候，同样需要使用英文单引号将其括起来。日期的格式有很多种（’26 Jan 2010’ 或者’10&#x2F;01&#x2F;26’ 等），本人习惯使用 ‘2020-01-26’ 这种<code>&#39;年-月-日&#39;</code>的格式。</li>
+<li>在 SQL 语句中书写数字的时候，不需要使用任何符号标识，直接写成 1000 这样的数字即可。</li>
+</ol>
+<p>&#x3D;&#x3D;列名不是字符串，不能使用单引号。在MySQL中可以用倒引号&#96;把表名和列名括起来。😖&#x3D;&#x3D;</p>
+<p><strong>单词需要用半角空格或者换行来分隔</strong></p>
+<p>单词之间必须使用半角空格（英文空格）或换行符来进行分隔。没有分隔的语句会发生错误，无法正常执行。</p>
+<ul>
+<li>CREATE TABLE Product（正确）</li>
+<li>CREATETABLE Product（错误）</li>
+<li>CREATE TABLEProduct（错误）</li>
+</ul>
+<h1 id="MySQL查看或显示数据库"><a href="#MySQL查看或显示数据库" class="headerlink" title="MySQL查看或显示数据库"></a>MySQL查看或显示数据库</h1><blockquote>
+<p>数据库可以看作是一个专门存储数据对象的容器，每一个数据库都有唯一的名称，并且数据库的名称都是有实际意义的，这样就可以清晰的看出每个数据库用来存放什么数据。在 <a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/">MySQL</a> 数据库中存在系统数据库和自定义数据库，系统数据库是在安装 MySQL 后系统自带的数据库，自定义数据库是由用户定义创建的数据库。</p>
+</blockquote>
+<p>使用 <strong>SHOW DATABASES</strong> 语句来查看或显示当前用户权限范围以内的数据库。</p>
+<pre><code class="mysql">SHOW DATABASES [LIKE &#39;数据库名&#39;];
+</code></pre>
+<ol>
+<li>LIKE 从句是可选项，用于匹配指定的数据库名称。LIKE 从句可以部分匹配，也可以完全匹配。</li>
+<li>数据库名由单引号<code>&#39;&#39;</code>包围</li>
+</ol>
+<p><strong>查看所有数据库</strong></p>
+<p>列出当前用户可查看的所有数据库：</p>
+<pre><code class="mysql">mysql&gt; show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| test               |
++--------------------+
+4 rows in set (0.00 sec)
+</code></pre>
+<p>可以发现，在上面的列表中有 6 个数据库，它们都是安装 MySQL 时系统自动创建的，其各自功能如下：</p>
+<ol>
+<li>information_schema：主要存储了系统中的一些数据库对象信息，比如用户表信息、列信息、权限信息、字符集信息和分区信息等。</li>
+<li>mysql：MySQL 的核心数据库，类似于 SQL Server 中的 master 表，主要负责存储数据库用户、用户访问权限等 MySQL 自己需要使用的控制和管理信息。常用的比如在 mysql 数据库的 user 表中修改 root 用户密码。</li>
+<li>performance_schema：主要用于收集数据库服务器性能参数。</li>
+<li>sakila：MySQL 提供的样例数据库，该数据库共有 16 张表，这些数据表都是比较常见的，在设计数据库时，可以参照这些样例数据表来快速完成所需的数据表。</li>
+<li>sys：MySQL 5.7 安装完成后会多一个 sys 数据库。sys 数据库主要提供了一些视图，数据都来自于 performation_schema，主要是让开发者和使用者更方便地查看性能问题。</li>
+<li>world：world 数据库是 MySQL 自动创建的数据库，该数据库中只包括 3 张数据表，分别保存城市，国家和国家使用的语言等内容。</li>
+</ol>
+<p><strong>创建并查看数据库</strong></p>
+<p>先创建一个名为 test_db 的数据库：</p>
+<pre><code class="mysql">mysql&gt; create database test_db;
+Query OK, 1 row affected (0.00 sec)
+mysql&gt; show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| test               |
+| test_db            |
++--------------------+
+5 rows in set (0.00 sec)
+</code></pre>
+<p><strong>使用 LIKE 从句</strong></p>
+<p>先创建三个数据库，名字分别为 test_db、db_test、db_test_db。</p>
+<ol>
+<li>使用 LIKE 从句，查看与 test_db 完全匹配的数据库：</li>
+</ol>
+<pre><code class="mysql">mysql&gt; SHOW DATABASES LIKE &#39;test_db&#39;;
++--------------------+
+| Database (test_db) |
++--------------------+
+| test_db            |
++--------------------+
+1 row in set (0.00 sec)
+</code></pre>
+<ol start="2">
+<li>使用 LIKE 从句，查看名字中包含 test 的数据库：</li>
+</ol>
+<pre><code class="mysql">mysql&gt; SHOW DATABASES LIKE &#39;%test%&#39;;
++-------------------+
+| Database (%test%) |
++-------------------+
+| db_test           |
+| db_test_db        |
+| test              |
+| test_db           |
++-------------------+
+4 rows in set (0.00 sec)
+
+mysql&gt;
+</code></pre>
+<ol start="3">
+<li>使用 LIKE 从句，查看名字以 db 开头的数据库：</li>
+</ol>
+<pre><code class="mysql">mysql&gt; SHOW DATABASES LIKE &#39;db%&#39;;
++----------------+
+| Database (db%) |
++----------------+
+| db_test        |
+| db_test_db     |
++----------------+
+2 rows in set (0.00 sec)
+
+mysql&gt;
+</code></pre>
+<ol start="4">
+<li>使用 LIKE 从句，查看名字以 db 结尾的数据库：</li>
+</ol>
+<pre><code class="mysql">mysql&gt; SHOW DATABASES LIKE &#39;%db&#39;;
++----------------+
+| Database (%db) |
++----------------+
+| db_test_db     |
+| test_db        |
++----------------+
+2 rows in set (0.00 sec)
+
+mysql&gt;
+</code></pre>
+<h1 id="MySQL创建数据库"><a href="#MySQL创建数据库" class="headerlink" title="MySQL创建数据库"></a>MySQL创建数据库</h1><p>可以使用 <strong>CREATE DATABASE</strong> 语句创建数据库</p>
+<pre><code class="mysql">CREATE DATABASE [IF NOT EXISTS] &lt;数据库名&gt;
+[[DEFAULT] CHARACTER SET &lt;字符集名&gt;] 
+[[DEFAULT] COLLATE &lt;校对规则名&gt;];
+</code></pre>
+<p><code>[ ]</code>中的内容是可选的。</p>
+<ol>
+<li>&lt;数据库名&gt;：创建数据库的名称。MySQL 的数据存储区将以目录方式表示 MySQL 数据库，因此数据库名称必须符合操作系统的文件夹命名规则，不能以数字开头，尽量要有实际意义。注意在 MySQL 中不区分大小写。</li>
+<li>IF NOT EXISTS：在创建数据库之前进行判断，只有该数据库目前尚不存在时才能执行操作。此选项可以用来避免数据库已经存在而重复创建的错误。</li>
+<li>[DEFAULT] CHARACTER SET：指定数据库的字符集。指定字符集的目的是为了避免在数据库中存储的数据出现乱码的情况。如果在创建数据库时不指定字符集，那么就使用系统的默认字符集。</li>
+<li>[DEFAULT] COLLATE：指定字符集的默认校对规则。</li>
+</ol>
+<p><u>MySQL 的字符集（CHARACTER）和校对规则（COLLATION）是两个不同的概念。字符集是用来定义 MySQL 存储字符串的方式，校对规则定义了比较字符串的方式。</u></p>
+<p>当已创建好库后再次输入<code>CREATE DATABASE test_db;</code>语句，则系统会给出错误提示信息</p>
+<pre><code>mysql&gt; CREATE DATABASE test_db;
+ERROR 1007 (HY000): Can&#39;t create database &#39;test_db&#39;; database exists
+</code></pre>
+<p>MySQL 不允许在同一系统下创建两个相同名称的数据库。</p>
+<p><strong>可以加上<code>IF NOT EXISTS</code>从句，就可以避免类似错误</strong></p>
+<pre><code class="mysql">mysql&gt; CREATE DATABASE IF NOT EXISTS test_db;
+Query OK, 1 row affected, 1 warning (0.00 sec)
+</code></pre>
+<p><strong>创建 MySQL 数据库时指定字符集和校对规则</strong></p>
+<p>使用 MySQL 命令行工具创建一个测试数据库，命名为 test_db_char，指定其默认字符集为 utf8，默认校对规则为 utf8_chinese_ci（简体中文，不区分大小写），输入的 SQL 语句与执行结果如下所示：</p>
+<pre><code class="mysql">mysql&gt; CREATE DATABASE IF NOT EXISTS test_db_char
+    -&gt; DEFAULT CHARACTER SET utf8
+    -&gt; DEFAULT COLLATE utf8_chinese_ci;
+Query OK, 1 row affected (0.00 sec)
+</code></pre>
+<p>这时，可以使用<code>SHOW CREATE DATABASE</code>查看 test_db_char 数据库的定义声明，发现该数据库的指定字符集为 utf8，运行结果如下所示：</p>
+<pre><code class="mysql">mysql&gt; SHOW CREATE DATABASE test_db_char;
++--------------+-----------------------------------------------------+
+| Database     | Create Database                                     |
++--------------+-----------------------------------------------------+
+| test_db_char | CREATE DATABASE `test_db_char` /*!40100 DEFAULT CHARACTER SET utf8 */ |
++--------------+-----------------------------------------------------+
+1 row in set (0.00 sec)
+</code></pre>
+<h1 id="MySQL修改数据库"><a href="#MySQL修改数据库" class="headerlink" title="MySQL修改数据库"></a>MySQL修改数据库</h1><p>在 MySQL 中，可以使用 <strong>ALTER DATABASE</strong> 来修改已经被创建或者存在的数据库的相关参数。</p>
+<pre><code class="mysql">ALTER DATABASE [数据库名] &#123; 
+[ DEFAULT ] CHARACTER SET &lt;字符集名&gt; |
+[ DEFAULT ] COLLATE &lt;校对规则名&gt;&#125;
+</code></pre>
+<ol>
+<li>ALTER DATABASE 用于更改数据库的全局特性。</li>
+<li>使用 ALTER DATABASE 需要获得数据库 ALTER 权限。</li>
+<li>数据库名称可以忽略，此时语句对应于默认数据库。</li>
+<li>CHARACTER SET 子句用于更改默认的数据库字符集。</li>
+</ol>
+<p><strong>查看 test_db 数据库的定义声明的执行结果</strong></p>
+<pre><code>mysql&gt; SHOW CREATE DATABASE test_db;
++----------+--------------------------------------------------------------------+
+| Database | Create Database                                                    |
++----------+--------------------------------------------------------------------+
+| test_db  | CREATE DATABASE `test_db` /*!40100 DEFAULT CHARACTER SET latin1 */ |
++----------+--------------------------------------------------------------------+
+1 row in set (0.00 sec)
+</code></pre>
+<p>使用命令行工具将数据库 test_db 的指定字符集修改为 gb2312，默认校对规则修改为 gb2312_unicode_ci，输入 SQL 语句与执行结果如下所示：</p>
+<pre><code class="mysql">mysql&gt; ALTER DATABASE test_db
+    -&gt; DEFAULT CHARACTER SET gb2312
+    -&gt; DEFAULT COLLATE gb2312_chinese_ci;
+Query OK, 1 row affected (0.00 sec)
+
+mysql&gt; SHOW CREATE DATABASE test_db;
++----------+--------------------------------------------------------------------+
+| Database | Create Database                                                    |
++----------+--------------------------------------------------------------------+
+| test_db  | CREATE DATABASE `test_db` /*!40100 DEFAULT CHARACTER SET gb2312 */ |
++----------+--------------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql&gt;
+</code></pre>
+<h1 id="MySQL删除数据库"><a href="#MySQL删除数据库" class="headerlink" title="MySQL删除数据库"></a>MySQL删除数据库</h1><blockquote>
+<p>当数据库不再使用时应该将其删除，以确保数据库存储空间中存放的是有效数据。</p>
+<p>删除数据库是将已经存在的数据库从磁盘空间上清除，清除之后，数据库中的所有数据也将一同被删除。</p>
+</blockquote>
+<hr>
+<p>在 MySQL中，当需要删除已创建的数据库时，可以使用 <strong>DROP DATABASE</strong> 语句。</p>
+<pre><code class="mysql">DROP DATABASE [ IF EXISTS ] &lt;数据库名&gt;
+</code></pre>
+<ol>
+<li>&lt;数据库名&gt;：指定要删除的数据库名。</li>
+<li>IF EXISTS：用于防止当数据库不存在时发生错误。</li>
+<li>DROP DATABASE：删除数据库中的所有表格并同时删除数据库。使用此语句时要非常小心，以免错误删除。如果要使用 DROP DATABASE，需要获得数据库 DROP 权限。</li>
+</ol>
+<p>&#x3D;&#x3D;注：MySQL 安装后，系统会自动创建名为 information_schema 和 mysql 的两个系统数据库，系统数据库存放一些和数据库相关的信息，如果删除了这两个数据库，MySQL 将不能正常工作。😠&#x3D;&#x3D;</p>
+<p>使用命令行工具将数据库 test_db_del 从数据库列表中删除</p>
+<pre><code class="mysql">mysql&gt; DROP DATABASE test_db_del;
+Query OK, 0 rows affected (0.02 sec)
+</code></pre>
+<p>此时数据库 test_db_del 不存在。再次执行相同的命令，直接使用 DROP DATABASE test_db_del，系统会报错</p>
+<pre><code class="mysql">mysql&gt; DROP DATABASE test_db_del;
+ERROR 1008 (HY000): Can&#39;t drop database &#39;test_db_del&#39;; database doesn&#39;t exist
+mysql&gt;
+</code></pre>
+<p>&#x3D;&#x3D;注：使用 DROP DATABASE 命令时要非常谨慎，在执行该命令后，MySQL 不会给出任何提示确认信息。DROP DATABASE 删除数据库后，数据库中存储的所有数据表和数据也将一同被删除，而且不能恢复。因此最好在删除数据库之前先将数据库进行备份。😠&#x3D;&#x3D;</p>
+<h1 id="MySQL选择数据库"><a href="#MySQL选择数据库" class="headerlink" title="MySQL选择数据库"></a>MySQL选择数据库</h1><p>在 MySQL 中，<strong>USE</strong> 语句用来完成一个数据库到另一个数据库的跳转。</p>
+<p>当用 CREATE DATABASE 语句创建数据库之后，该数据库不会自动成为当前数据库，需要用 USE 来指定当前数据库。</p>
+<pre><code class="mysql">USE &lt;数据库名&gt;
+</code></pre>
+<p>该语句可以通知 MySQL 把<code>&lt;数据库名&gt;</code>所指示的数据库作为当前数据库。该数据库保持为默认数据库，直到语段的结尾，或者直到遇见一个不同的 USE 语句。 只有使用 USE 语句来指定某个数据库作为当前数据库之后，才能对该数据库及其存储的数据对象执行操作。</p>
+<hr>
+<p>使用命令行工具将数据库 test_db 设置为默认数据库。</p>
+<pre><code class="mysql">mysql&gt; USE test_db;
+Database changed
+</code></pre>
+<p>出现“Database changed”提示，则表示选择数据库成功。</p>
+<h1 id="MySQL注释"><a href="#MySQL注释" class="headerlink" title="MySQL注释"></a>MySQL注释</h1><p><strong>MySQL 单行注释</strong></p>
+<ol>
+<li>单行注释可以使用<code>#</code>注释符，<code>#</code>注释符后直接加注释内容。</li>
+</ol>
+<pre><code class="mysql">#注释内容
+#从结果中删除重复行
+SELECT DISTINCT product_id, purchase_price FROM Product;
+</code></pre>
+<ol start="2">
+<li>单行注释可以使用<code>--</code>注释符，<code>--</code>注释符后需要加一个空格，注释才能生效。</li>
+</ol>
+<pre><code class="mysql">-- 注释内容
+-- 从结果中删除重复行
+SELECT DISTINCT product_id, purchase_price FROM Product;
+</code></pre>
+<p>&#x3D;&#x3D;<code>#</code>和<code>--</code>的区别就是：<code>#</code>后面直接加注释内容，而<code>--</code>的第 2 个破折号后需要跟一个空格符在加注释内容。&#x3D;&#x3D;😑</p>
+<p><strong>MySQL 多行注释</strong></p>
+<p>多行注释使用<code>/* */</code>注释符。<code>/*</code>用于注释内容的开头，<code>*/</code>用于注释内容的结尾。</p>
+<pre><code class="mysql">/*
+  第一行注释内容
+  第二行注释内容
+*/
+/*这条SELECT语句，
+  会从结果中删除重复行*/
+SELECT DISTINCT product_id, purchase_price FROM Product;
+</code></pre>
+<ul>
+<li><p>任何注释（单行注释和多行注释）都可以插在 SQL 语句中，且注释可以放在 SQL 语句中的任意位置。</p>
+</li>
+<li><p>注释可以写在任何 SQL 语句当中，且 SQL 语句中对注释的数量没有限制。</p>
+<h1 id="typora扩展"><a href="#typora扩展" class="headerlink" title="typora扩展"></a>typora扩展</h1><p>  alpha:$\alpha$  beta:$\beta$  gamma:$\gamma$  theta:$\theta$  rho:$\rho$ lambda:$\lambda$ mu:$\mu$</p>
+</li>
+</ul>
+<p>Delta:$\Delta$  pi:$\pi$  Omega:$\Omega$</p>
+<p>uparrow:$\uparrow$</p>
+<p>downarrow:$\downarrow$</p>
+<p>leftarrow:$\leftarrow$</p>
+<p>longleftarrow:$\longleftarrow$</p>
+<p>rightarrow:$\rightarrow$</p>
+<p>longrightarrow:$\longrightarrow $</p>
+<p>sqrt:$\sqrt{}$</p>
+<p>frac:$\frac{111}{222}$</p>
+<p>left[ right]:$\left[ \right]$</p>
+<p>矩阵：<br>$$<br>\left[ matrix{<br>3 &amp; 2\<br>5 &amp; 5<br>}<br>\right]<br>$$<br>$$ a &#x3D; \left[ \matrix{  \alpha_1 &amp; test1\  \alpha_2 &amp; test2\  \alpha_3 &amp; test3  } \right] $$</p>
 
         </article>
 
@@ -960,7 +1405,7 @@
 <script src="/lib/fancybox/js/jquery.fancybox.min.js"></script>
 
 
-<script src="/js/app.js?v=1695210040654"></script>
+<script src="/js/app.js?v=1696987842972"></script>
 
 <script src="https://lib.baomitu.com/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
 <script>
@@ -991,11 +1436,11 @@
 
 <link rel="stylesheet" href="/lib/codeBlock/matery.css">
 
+<script src="/js/webapp.js"></script>
+
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 
 <script src="/js/search.js"></script>
-
-<script src="/js/webapp.js"></script>
 <!-- hexo injector body_end end --></body>
 </html>
 
