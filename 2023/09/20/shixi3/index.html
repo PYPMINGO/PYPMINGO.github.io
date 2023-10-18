@@ -24,8 +24,12 @@
 <meta property="og:description" content="我的实习3">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/2023/09/20/shixi3/4-1Z220153J2254.gif">
+<meta property="og:image" content="http://example.com/2023/09/20/shixi3/i5.png">
+<meta property="og:image" content="http://example.com/2023/09/20/shixi3/i6.png">
+<meta property="og:image" content="http://example.com/2023/09/20/shixi3/i2.png">
+<meta property="og:image" content="http://example.com/2023/09/20/shixi3/i3.png">
 <meta property="article:published_time" content="2023-09-20T08:54:41.373Z">
-<meta property="article:modified_time" content="2023-10-10T10:03:00.221Z">
+<meta property="article:modified_time" content="2023-10-18T06:44:35.605Z">
 <meta property="article:author" content="puyiping">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/2023/09/20/shixi3/4-1Z220153J2254.gif">
@@ -37,7 +41,7 @@
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_8z08qcz5sq3.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1696987937497">
+  <link rel="stylesheet" href="/css/style.css?v=1697611634244">
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -197,8 +201,8 @@
 
         <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2023年09月20日</a>
-    <a><i class="nexmoefont icon-areachart"></i>5.4k 字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 23 分钟</a>
+    <a><i class="nexmoefont icon-areachart"></i>7.7k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 34 分钟</a>
 </div>
 
         <div class="nexmoe-post-right">
@@ -343,6 +347,7 @@ VALUES (41048101, &#39;C语言中文网MySQL教程&#39;, &#39;1&#39;, &#39;2013-
 <li>数据库名、表名和列名等小写</li>
 </ol>
 <p>下表总结了 SQL 元素在 Windows 和 Linux 系统是否区分大小写。</p>
+<div>
 <table>
 <tbody>
 <tr>
@@ -395,6 +400,248 @@ VALUES (41048101, &#39;C语言中文网MySQL教程&#39;, &#39;1&#39;, &#39;2013-
 <li>CREATETABLE Product（错误）</li>
 <li>CREATE TABLEProduct（错误）</li>
 </ul>
+<h6 id="MySQL-数据类型"><a href="#MySQL-数据类型" class="headerlink" title="MySQL 数据类型"></a>MySQL 数据类型</h6><div style="background-color: #66EF94">
+<table>                                                        
+<thead>                                                    
+<tr>                                                         
+ <th bgcolor="antiquewhite">数据类型</th>   
+ <th bgcolor="antiquewhite">指定值和范围</th>                                        
+ </tr>
+    </thead>       
+    <tbody>                                               
+<tr>                                                         
+<td>CHAR</td> 
+ <td>String(0~255)</td>        
+</tr>                   
+<tr>                                                         
+ <td>VARCHAR</td> 
+<td>String(0~255)</td>                                       
+</tr>                                                        
+<tr>                                                         
+ <td>TINYTEXT</td> 
+<td>String(0~255)</td>                                       
+</tr>                                                        
+<tr>                                                         
+ <td>TEXT</td> 
+<td>String(0~65536)</td>   
+</tr>                                                        
+ <tr>                                                         
+ <td>BLOB</td>               
+<td>String(0~65536)</td>                                     
+ </tr>                                                        
+<tr>                                                         
+<td>MEDIUMTEXT</td> 
+ <td>String(0~16777215)</td>                                  
+ </tr>                                                        
+<tr>
+<td>MEDIUMBLOB</td> 
+    <td>String(0~16777215)</td>                 
+</tr>                                       
+ <tr>                                                         
+<td>LONGBLOB</td>       
+<td>String(0~4294967295)</td>               
+</tr>                                       
+<tr>                                         
+<td>LONGTEXT</td> 
+<td>String(0~4294967295)</td>               
+</tr>                                       
+ <tr>
+ <td>TINYINT</td> 
+ <td>Integer(-128~127)</td>   
+ </tr>                                                        
+<tr>                                         
+<td>SMALLINT</td> 
+<td>Integer(-32768~32767)</td>               
+</tr>                                       
+ <tr>                                         
+<td>MEDIUMINT</td> 
+ <td>Integer(-8388608~8388607)</td>           
+</tr>                                       
+  <tr>                                         
+<td>INT</td> 
+<td>Integer(-214847668~214847667)</td>       
+</tr>                                       
+<tr>                                         
+   <td>BIGINT</td> 
+<td>Integer(-9223372036854775808~9223372036854775807)</td>   
+</tr>                                       
+<tr>                                         
+<td>FLOAT</td>              
+<td>decimal(精确到23位小数)</td>               
+</tr>                                       
+<tr>                                                         
+<td>DOUBLE</td>             
+<td>decimal(24~54位小数)</td>                           
+</tr>                                                  
+<tr>                                                         
+<td>DECIMAL</td> 
+ <td>将<code>DOUBLE</code>转储为字符串形式</td> 
+</tr>                                       
+    <tr>                                          
+    <td>DATE</td> 
+ <td><em>YYYY-MM-DD</em></td>                
+    </tr>                                      
+<tr>                                                         
+<td>DATETIME</td> 
+<td><em>YYYY-MM-DD HH:MM:SS</em></td>        
+</tr>                                                     
+<tr>                   
+<td>TIMESTAMP</td>
+<td><em>YYYYMMDDHHMMSS</em></td>             
+</tr>                                       
+ <tr>                                          
+    <td>TIME</td> 
+ <td><em>HH:MM:SS</em></td>                                   
+ </tr>                                                        
+<tr>                                         
+<td>ENUM</td> 
+<td>选项值之一</td>                
+</tr>                                                        
+<tr>                           
+ <td>SET</td>    
+<td>选项值子集</td>                      
+ </tr>                                                        
+ <tr>                                                         
+<td>BOOLEAN</td>            
+<td>tinyint(1)</td>                                          
+</tr>      </tbody>          
+   </table>   
+</div>
+
+
+
+
+
+
+
+<h6 id="MySQL数字数据类型"><a href="#MySQL数字数据类型" class="headerlink" title="MySQL数字数据类型"></a>MySQL数字数据类型</h6><div style="background-color:antiquewhite">
+<table>
+   <thead>
+<tr>
+<th bgcolor="green">数字类型</th>
+<th bgcolor="green">
+   描述
+ </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TINYINT</code></td>
+<td>一个非常小的整数</td>
+</tr>
+<tr>
+<td><code>SMALLINT</code></td>
+<td>一个小整数</td>
+</tr>
+<tr>
+<td><code>MEDIUMINT</code></td>
+<td>一个中等大小的整数</td>
+</tr>
+<tr>
+<td><code>INT</code></td>
+<td>标准整数</td>
+</tr>
+<tr>
+<td><code>BIGINT</code></td>
+<td>一个大整数</td>
+</tr>
+<tr>
+<td><code>DECIMAL</code></td>
+<td>定点数</td>
+</tr>
+<tr>
+<td><code>FLOAT</code></td>
+<td>单精度浮点数</td>
+</tr>
+<tr>
+<td> <code>DOUBLE</code></td>
+<td>双精度浮点数</td>
+</tr>
+<tr>
+<td><code>BIT</code></td>
+<td>一个字节段</td>
+</tr>
+</tbody></table>
+</div>
+###### MySQL日期和时间数据类型
+
+<table bgcolor="antiquewhite">
+<thead>
+<tr>
+<th bgcolor="#66EF94">日期和时间类型</th>
+<th bgcolor="#66EF94">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DATE</code></td>
+<td><code>YYYY-MM-DD</code>格式日期值</td>
+</tr>
+<tr>
+<td> <code>TIME</code></td>
+<td><code>hh:mm:ss</code>格式时间值</td>
+</tr>
+<tr>
+<td> <code>DATETIME</code></td>
+<td><code>YYYY-MM-DD hh:mm:ss</code> 格式化日期和时间值</td>
+</tr>
+<tr>
+<td> <code>TIMESTAMP</code></td>
+<td> <code>YYYY-MM-DD hh:mm:ss</code>时间戳格式化</td>
+</tr>
+<tr>
+<td> <code>YEAR</code></td>
+<td><code>YYYY</code> 或 <code>YY</code>格式年值</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <h1 id="MySQL查看或显示数据库"><a href="#MySQL查看或显示数据库" class="headerlink" title="MySQL查看或显示数据库"></a>MySQL查看或显示数据库</h1><blockquote>
 <p>数据库可以看作是一个专门存储数据对象的容器，每一个数据库都有唯一的名称，并且数据库的名称都是有实际意义的，这样就可以清晰的看出每个数据库用来存放什么数据。在 <a target="_blank" rel="noopener" href="http://c.biancheng.net/mysql/">MySQL</a> 数据库中存在系统数据库和自定义数据库，系统数据库是在安装 MySQL 后系统自带的数据库，自定义数据库是由用户定义创建的数据库。</p>
 </blockquote>
@@ -500,6 +747,142 @@ mysql&gt;
 
 mysql&gt;
 </code></pre>
+<h6 id="查询表名"><a href="#查询表名" class="headerlink" title="查询表名"></a>查询表名</h6><blockquote>
+<p>使用<strong>MySQL SELECT</strong>语句查询表或视图中的数据。 <code>SELECT</code>语句允许您从表或视图中获取数据。表格包含行和列，如电子表格。通常，您希望查看子集行，列的子集或两者的组合。<code>SELECT</code>语句的结果称为结果集，它是一个行列表，每个行包含相同数量的列。现有students表：</p>
+</blockquote>
+<pre><code>mysql&gt; select * from students;
++------+------------+------+--------+--------+-------------+-------+------------+
+| id   | username   | age  | height | weight | address     | score | datetime   |
++------+------------+------+--------+--------+-------------+-------+------------+
+|   10 | jason      |   18 |    182 |     56 | 1233@qq.com |    99 | 2023-10-11 |
+|    1 | lihua      |   18 |    185 |     67 | 1233@qq.com |    89 | 2023-10-06 |
+|    2 | wangqiang  |   18 |    144 |     45 | 1233@qq.com |    78 | 2023-10-06 |
+|    1 | mingo      |   18 |    136 |     34 | 1233@qq.com |    77 | 2023-10-21 |
+|    4 | xionghaizi |   18 |    111 |     66 | 1233@qq.com |    89 | 2023-10-06 |
+|    5 | xiaohong   |   18 |    122 |     76 | 1233@qq.com |    76 | 2023-10-22 |
+|    6 | smi        |   18 |    167 |     34 | 1233@qq.com |    45 | 2023-10-06 |
+|    7 | xwhihxi    |   18 |    189 |     32 | 1233@qq.com |    43 | 2023-10-06 |
+| NULL | xwk        |   18 |    198 |     87 | 1233@qq.com |    78 | 2023-10-06 |
+|    9 | xjjxw      |   18 |    210 |     67 | 1233@qq.com |    46 | 2023-10-06 |
++------+------------+------+--------+--------+-------------+-------+------------+
+10 rows in set (0.00 sec)
+</code></pre>
+<p><code>SELECT</code>语句控制您要查看的列和行。</p>
+<pre><code class="mysql">SELECT
+    column_1, column_2, ...
+FROM
+    table_1
+[INNER | LEFT |RIGHT] JOIN table_2 ON conditions
+WHERE
+    conditions
+GROUP BY column_1
+HAVING group_conditions
+ORDER BY column_1
+LIMIT offset, length; 
+</code></pre>
+<p>以下是<code>SELECT</code>的使用及相关的组合关键字：</p>
+<ol>
+<li>SELECT 后跟逗号分隔列或星号（*）列表，表示返回所有列。</li>
+<li>FROM 指定要查询数据的表或视图。</li>
+<li>JOIN 根据特定的连接条件从其他表中获取相关数据。</li>
+<li>WHERE 子句过滤结果集中的行。</li>
+<li>GROUP BY] 子句将一组行分组到组中，并在每个组上应用聚合函数。</li>
+<li>HAVING 子句根据GROUP BY子句定义的组过滤组。</li>
+<li>ORDER  BY子句指定用于排序的列的列表。</li>
+<li>LIMIT  约束返回的行数。</li>
+</ol>
+<hr>
+<p>查询语句中要求必须包含<code>SELECT</code>和<code>FROM</code> ,其它都是可选项。</p>
+<p> 如果要获取表中所有列的数据，可以列出<code>SELECT</code>子句中的所有列名。或者您只需使用星号（*）表示您希望从表的所有列获取数据.</p>
+<pre><code class="mysql">SELECT * from students 
+WHERE username=&#39;xiaohong&#39;;
+</code></pre>
+<div><image src="./shixi3/i7.png"></image></div>
+
+<pre><code class="mysql">SELECT * from students 
+WHERE username LIKE &#39;xi%&#39; and height&gt;90;
+</code></pre>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="i5.png" alt="shixi3" class="lazyload"></p>
+<pre><code class="mysql">SELECT * from students 
+WHERE (username LIKE &#39;xi%&#39; or username LIKE &#39;j%&#39;) AND height&gt;90;
+</code></pre>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="i6.png" alt="shixi3" class="lazyload"></p>
+<h6 id="MySQL-DISTINCT"><a href="#MySQL-DISTINCT" class="headerlink" title="MySQL DISTINCT"></a>MySQL DISTINCT</h6><blockquote>
+<p>使用 <strong>MySQL DISTINCT</strong> 子句来消除结果集中的重复行。</p>
+</blockquote>
+<p>在<code>SELECT</code>子句中请使用<code>DISTINCT</code> 语句。</p>
+<pre><code class="mysql">SELECT DISTINCT
+    columns
+FROM
+    students; 
+</code></pre>
+<h6 id="MySQL-ORDER-BY"><a href="#MySQL-ORDER-BY" class="headerlink" title="MySQL ORDER BY"></a>MySQL ORDER BY</h6><blockquote>
+<p>对结果集进行排序。</p>
+</blockquote>
+<p>因为在使用SELECT语句从表中查询数据时，结果集不按任何顺序排序。如果要对结果集进行排序，请使用该<code>ORDER BY</code> 子句。<code>ORDER BY</code> 允许的操作：</p>
+<ul>
+<li>按单列或多列对结果集进行排序。</li>
+<li>按升序或降序对不同列的结果集进行排序。</li>
+</ul>
+<pre><code class="mysql">SELECT column1, column2,...
+FROM tbl
+ORDER BY column1 [ASC|DESC], column2 [ASC|DESC],... 
+</code></pre>
+<p><code>ASC</code>代表升序 和 <code>DESC</code>代表下降。默认情况下，<code>ORDER BY</code> 如果未指定<code>ASC</code>或<code>DESC </code>显式，则子句按升序对结果集进行排序 。</p>
+<h6 id="WHERE"><a href="#WHERE" class="headerlink" title="WHERE"></a>WHERE</h6><blockquote>
+<p>过滤结果集中的行。</p>
+</blockquote>
+<pre><code class="mysql">SELECT 
+    select_list
+FROM
+    table_name
+WHERE
+    search_condition; 
+</code></pre>
+<p><strong><code>search_condition</code>是使用逻辑运算符的一个或多个谓词的组合<code>AND</code>，<code>OR</code>和<code>NOT</code>。在SQL中，谓词是一个计算结果为true，false或unknown的表达式。 从中<code>table_name</code>查出<code>search_condition </code>为true的任何行都将包含在最终结果集中。 除了<code>SELECT</code>语句之外，您还可以在<code>WHERE</code>子句使用and 指定要更新和删除的行。<code>UPDATE</code> <code>DELETE</code>.</strong></p>
+<h6 id="AND"><a href="#AND" class="headerlink" title="AND"></a>AND</h6><blockquote>
+<p><code>AND</code>操作是将两个或多个逻辑运算符布尔表达式只有当两个表达式为true返回true。如果两个表达式的一个评估为假返回false。</p>
+</blockquote>
+<pre><code class="mysql">boolean_expression_1 
+AND boolean_expression_2 
+</code></pre>
+<div><code>AND</code>组合true，false和null时运算符的结果。
+<table class="bt-table-all notranslate">
+<tbody>
+<tr>
+<th bgcolor="green"></th>
+<th bgcolor="green">TRUE</th>
+<th bgcolor="yellow">FALSE</th>
+<th bgcolor="yellow">NULL</th>
+</tr>
+<tr>
+<td bgcolor="green" ;data-th="TRUE"><strong>TRUE</strong></td>
+<td bgcolor="antiquewhite" ;data-th="TRUE">TRUE</td>
+<td bgcolor="antiquewhite" ;data-th="FALSE">FALSE</td>
+<td bgcolor="yellow" ;data-th="NULL">NULL</td>
+</tr>
+<tr>
+<td bgcolor="green" ;data-th=" "><strong>FALSE</strong></td>
+<td bgcolor="antiquewhite" ;data-th="TRUE">FALSE</td>
+<td bgcolor="antiquewhite" ;data-th="FALSE">FALSE</td>
+<td bgcolor="yellow" ;data-th="NULL">FALSE</td>
+</tr>
+<tr>
+<td bgcolor="green" ;data-th="NULL"><strong>NULL</strong></td>
+<td bgcolor="antiquewhite" ;data-th="TRUE">NULL</td>
+<td bgcolor="antiquewhite" ;data-th="FALSE">FALSE</td>
+<td bgcolor="yellow" ;data-th="NULL">NULL</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+
+
+
+
+
 <h1 id="MySQL创建数据库"><a href="#MySQL创建数据库" class="headerlink" title="MySQL创建数据库"></a>MySQL创建数据库</h1><p>可以使用 <strong>CREATE DATABASE</strong> 语句创建数据库</p>
 <pre><code class="mysql">CREATE DATABASE [IF NOT EXISTS] &lt;数据库名&gt;
 [[DEFAULT] CHARACTER SET &lt;字符集名&gt;] 
@@ -574,6 +957,118 @@ mysql&gt; SHOW CREATE DATABASE test_db;
 
 mysql&gt;
 </code></pre>
+<h6 id="MySQL-CREATE-TABLE"><a href="#MySQL-CREATE-TABLE" class="headerlink" title="MySQL CREATE TABLE"></a>MySQL CREATE TABLE</h6><pre><code class="mysql">CREATE TABLE [IF NOT EXISTS] table_name(
+    column_list
+) ENGINE=storage_engine 
+</code></pre>
+<h6 id="INSERT"><a href="#INSERT" class="headerlink" title="INSERT"></a><strong>INSERT</strong></h6><p>向数据库表中插入一条新记录,使用<code>INSERT</code>语句。</p>
+<pre><code class="mysql">INSERT INTO 表名 (字段1, 字段2, ...) VALUES (值1, 值2, ...);
+</code></pre>
+<h6 id="MySQL-INSERT-INTO-SELECT"><a href="#MySQL-INSERT-INTO-SELECT" class="headerlink" title="MySQL INSERT INTO SELECT"></a><strong>MySQL INSERT INTO SELECT</strong></h6><p>如何使用<code>INSERT</code>带有<code>VALUES</code>子句中指定的列值列表的语句将一行或多行添加到表中。</p>
+<pre><code class="mysql">INSERT INTO table_name(c1,c2,...)
+VALUES(v1,v2,..); 
+</code></pre>
+<pre><code class="mysql">mysql&gt; INSERT INTO students(username)
+    -&gt; VALUES(&#39;jason&#39;);
+Query OK, 1 row affected (0.00 sec)
+</code></pre>
+<p>使用<code>SELECT</code>语句的结果作为INSERT语句的数据源。</p>
+<pre><code class="mysql">INSERT INTO table_name(column_list)
+SELECT 
+   select_list 
+FROM 
+   another_table; 
+</code></pre>
+<blockquote>
+<p>假设我们有以下<code>suppliers</code>表格，结构如下：</p>
+</blockquote>
+<pre><code class="mysql">CREATE TABLE suppliers (
+    supplierNumber INT AUTO_INCREMENT,
+    supplierName VARCHAR(50) NOT NULL,
+    phone VARCHAR(50),
+    addressLine1 VARCHAR(50),
+    addressLine2 VARCHAR(50),
+    city VARCHAR(50),
+    state VARCHAR(50),
+    postalCode VARCHAR(50),
+    country VARCHAR(50),
+    customerNumber INT,
+    PRIMARY KEY (supplierNumber)
+); 
+</code></pre>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="i2.png" alt="shixi3" class="lazyload"></p>
+<p><strong>使用<code>INSERT</code>语句向表中添加多行时，如果在处理过程中发生错误，MySQL将终止语句并返回错误。结果，没有行插入表中。 但是，如果使用<code>INSERT IGNORE</code>语句，将忽略导致错误的包含无效数据的行，并将具有有效数据的行插入到表中。</strong></p>
+<pre><code class="mysql">INSERT IGNORE INTO table(column_list)
+VALUES( value_list),
+      ( value_list),
+      ...
+</code></pre>
+<p>创建一个名为的新表<code>tasks</code>：创建一个名为的新表<code>tasks</code>：</p>
+<pre><code class="mysql">CREATE TABLE IF NOT EXISTS tasks (
+    task_id INT AUTO_INCREMENT,
+    title VARCHAR(255) NOT NULL,
+    start_date DATE,
+    due_date DATE,
+    status TINYINT NOT NULL,
+    priority TINYINT NOT NULL,
+    description TEXT,
+    PRIMARY KEY (task_id)
+)  ENGINE=INNODB; 
+
+#Query OK, 0 rows affected (0.01 sec)
+</code></pre>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="i3.png" alt="shixi3" class="lazyload"></p>
+<p>&#x3D;&#x3D;注意：<code>IGNORE</code>子句是MySQL对SQL标准的扩展。🙃&#x3D;&#x3D;</p>
+<!--创建  suppliers表。-->
+
+<pre><code class="mysql">SELECT 
+    id,
+    userName,
+    age,
+    height,
+    address,
+    addtime,
+FROM
+    userinfo
+WHERE
+    age=&#39;21&#39; AND 
+    address=&#39;1111&#39;; 
+</code></pre>
+<!--将`customers`表中的  这些客户插入  `suppliers`表中。-->
+
+<pre><code class="mysql">INSERT INTO suppliers (
+    supplierName, 
+    phone, 
+    addressLine1,
+    addressLine2,
+    city,
+    state,
+    postalCode,
+    country,
+    customerNumber
+)
+SELECT 
+    customerName,
+    phone,
+    addressLine1,
+    addressLine2,
+    city,
+    state ,
+    postalCode,
+    country,
+    customerNumber
+FROM 
+    customers
+WHERE 
+    country = &#39;USA&#39; AND 
+    state = &#39;CA&#39;; 
+</code></pre>
+<h6 id="MySQL-NOT-NULL-约束"><a href="#MySQL-NOT-NULL-约束" class="headerlink" title="MySQL NOT NULL 约束"></a>MySQL NOT NULL 约束</h6><ol>
+<li><code>NOT NULL</code>约束是列约束，迫使一列的值非NULL值。</li>
+<li>列<code>NOT NULL</code>只包含一个约束，它指定列不得包含任何<code>NULL</code>值的规则。</li>
+<li><code>title</code>与<code>start_date</code>列具有<code>NOT NULL</code>约束。<code>id</code>列具有<code>PRIMARY KEY</code>约束，因此，它隐含地包含<code>NOT NULL</code>约束。</li>
+<li><code>NOT NULL</code>除非您有充分的理由不这样做，否则最好在表的每一列中都有约束。</li>
+</ol>
 <h1 id="MySQL删除数据库"><a href="#MySQL删除数据库" class="headerlink" title="MySQL删除数据库"></a>MySQL删除数据库</h1><blockquote>
 <p>当数据库不再使用时应该将其删除，以确保数据库存储空间中存放的是有效数据。</p>
 <p>删除数据库是将已经存在的数据库从磁盘空间上清除，清除之后，数据库中的所有数据也将一同被删除。</p>
@@ -598,6 +1093,115 @@ ERROR 1008 (HY000): Can&#39;t drop database &#39;test_db_del&#39;; database does
 mysql&gt;
 </code></pre>
 <p>&#x3D;&#x3D;注：使用 DROP DATABASE 命令时要非常谨慎，在执行该命令后，MySQL 不会给出任何提示确认信息。DROP DATABASE 删除数据库后，数据库中存储的所有数据表和数据也将一同被删除，而且不能恢复。因此最好在删除数据库之前先将数据库进行备份。😠&#x3D;&#x3D;</p>
+<h6 id="删除表DELETE"><a href="#删除表DELETE" class="headerlink" title="删除表DELETE"></a>删除表DELETE</h6><blockquote>
+<p><strong>MySQL DELETE</strong>语句从单个表中删除数据。</p>
+</blockquote>
+<pre><code class="mysql">DELETE FROM table_name      //指定从中删除数据的表。
+WHERE condition;            //使用条件指定WHERE子句中要删除的行。如果行符合条件，则将删除行。
+</code></pre>
+<p>&#x3D;&#x3D;注意：$WHERE$ 子句是可选项。如果省略 $WHERE$ 子句，  $DELETE$ 语句将删除表中的所有行。&#x3D;&#x3D;</p>
+<hr>
+<p>除了从表中删除数据外，$DELETE$ 语句还返回已删除的行数。 要使用单个 $DELETE$ 语句从多个表中删除数据，请使用 $DELETE JOIN$。要删除表中的所有行而不需要知道删除了多少行，您应使用  $TRUNCATE TABLE$ 语句来获得更好的性能。对于具有外键约束的表，当从父表中删除行时，将使用$ON DELETE CASCADE$ 选项自动删除子表中的行。</p>
+<hr>
+<p>删除其<code>officeNumber</code>&#x3D; 4的员工，请使用$DELETE$带有$WHERE$子句的语句，如以下查询所示：</p>
+<pre><code class="mysql">DELETE FROM employees 
+WHERE
+    officeCode = 4; 
+</code></pre>
+<div>
+<div style="float:left">
+<table>
+    <thead>                                      <tr>                                      
+ <th bgcolor="antiquewhite">employees</th>      </tr>
+    </thead>       
+<tbody>
+<tr>
+<td> lastName </td>
+   </tr>
+   <tr>
+<td> firstName </td>
+   </tr>
+   <tr>
+      <td> extension </td>
+   </tr>
+<tr>
+      <td>email</td>
+   </tr>
+   <tr>
+      <td>  officeCode </td>
+   </tr>
+   <tr>
+      <td> reportsTo </td>
+   </tr>
+</tbody>
+</table>
+</div>
+<div style="float:right">
+<table>
+    <thead>                                      <tr>                                      
+ <th bgcolor="antiquewhite">employees</th>      </tr>
+    </thead>       
+<tbody>
+<tr>
+<td> lastName </td>
+   </tr>
+   <tr>
+<td> firstName </td>
+   </tr>
+   <tr>
+      <td> extension </td>
+   </tr>
+<tr>
+      <td>email</td>
+   </tr>
+   <tr>
+      <td> reportsTo </td>
+   </tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+
+
+
+
+
+<p>​                  $\longrightarrow$</p>
+<p>$\downarrow $​</p>
+<p><code>DELETE FROM employees; </code></p>
+<p>$\downarrow$</p>
+<div style="float:left">
+<table>
+    <thead>                                      <tr>                                      
+ <th bgcolor="antiquewhite">employees</th>      </tr>
+    </thead> </table></div>
+<div style="width:200px;float:right">
+       #删除employees表中的所有行，
+   使用DELETE不带WHERE子句的语句
+</div>
+
+
+
+<p>&#x3D;&#x3D;注意：一旦删除数据，它就会消失。因此，您应在执行下一节中的语句之前备份数据库 $DELETE$。&#x3D;&#x3D;😠</p>
+<h6 id="数据库的备份"><a href="#数据库的备份" class="headerlink" title="数据库的备份"></a>数据库的备份</h6><blockquote>
+<p>MySQL提供了一个非常有用的工具，可以非常快速地在服务器上本地备份或转储MySQL数据库。备份文件存储在服务器的文件系统中，因此您只需在需要时下载它。 备份MySQL数据库的工具是mysqldump。它位于MySQL安装文件夹的root &#x2F; bin文件夹中。 mysqldump是MySQL提供的一个程序，可用于转储数据库以备份或传输数据库到另一个数据库服务器。 转储文件包含一组用于创建数据库对象的SQL语句。此外，mysqldump可用于生成CSV，分隔符或XML文件。</p>
+</blockquote>
+<hr>
+<p> 如果无法远程桌面登录，可以使用SSH或Telnet登录远程服务器。备份MySQL数据库的命令如下：</p>
+<pre><code class="mysql">mysqldump -u [username] –p[password] [database_name] &gt; [dump_file.sql] 
+</code></pre>
+<p>上面命令的参数如下：</p>
+<ol>
+<li>[username]：有效的MySQL用户名。</li>
+<li>[password]：用户的有效密码。请注意，-p和密码之间没有空格。</li>
+<li>[database_name]：要备份的数据库名称</li>
+<li>[dump_file.sql]：要生成的转储文件。</li>
+</ol>
+<p>所有数据库结构和数据都将导出到单个[dump_file.sql]转储文件中。</p>
+<pre><code class="mysql">mysqldump -u mysqltutorial –psecret  mysqldemo &gt; c:\temp\backup001.sql 
+</code></pre>
 <h1 id="MySQL选择数据库"><a href="#MySQL选择数据库" class="headerlink" title="MySQL选择数据库"></a>MySQL选择数据库</h1><p>在 MySQL 中，<strong>USE</strong> 语句用来完成一个数据库到另一个数据库的跳转。</p>
 <p>当用 CREATE DATABASE 语句创建数据库之后，该数据库不会自动成为当前数据库，需要用 USE 来指定当前数据库。</p>
 <pre><code class="mysql">USE &lt;数据库名&gt;
@@ -652,8 +1256,16 @@ SELECT DISTINCT product_id, purchase_price FROM Product;
 <p>sqrt:$\sqrt{}$</p>
 <p>frac:$\frac{111}{222}$</p>
 <p>left[ right]:$\left[ \right]$</p>
-<p>矩阵：<br>$$<br>\left[ matrix{<br>3 &amp; 2\<br>5 &amp; 5<br>}<br>\right]<br>$$<br>$$ a &#x3D; \left[ \matrix{  \alpha_1 &amp; test1\  \alpha_2 &amp; test2\  \alpha_3 &amp; test3  } \right] $$</p>
-
+<p>times:$\times$</p>
+<p>矩阵：$\left[ \matrix{1&amp;2\3&amp;36}\right]$</p>
+<p>$\Delta&#x3D;b^2-4\times a\times c$</p>
+<p>$x&#x3D;\frac{-b^+_- \sqrt{\Delta}}{2a}$</p>
+<p>2H<del>2</del>O<del>2</del>&#x3D;&#x3D;2H<del>2</del>O+O<del>2</del>$\uparrow$</p>
+<p>$\tan x&#x3D;\frac{\sin{x}}{\cos{x}}$</p>
+<p>$\sin^2+\cos^2&#x3D;1$</p>
+<p>$\sin\frac{\pi}{2}&#x3D;1$</p>
+<p>$\sin{\frac{\pi}{3}}&#x3D;\frac{\sqrt3}{2}$</p>
+</div>
         </article>
 
         
@@ -1405,7 +2017,7 @@ SELECT DISTINCT product_id, purchase_price FROM Product;
 <script src="/lib/fancybox/js/jquery.fancybox.min.js"></script>
 
 
-<script src="/js/app.js?v=1696987937499"></script>
+<script src="/js/app.js?v=1697611634245"></script>
 
 <script src="https://lib.baomitu.com/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
 <script>
@@ -1424,6 +2036,10 @@ SELECT DISTINCT product_id, purchase_price FROM Product;
 <!-- hexo injector body_end start -->
 <script src="/js/clock.js"></script>
 
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<script src="/js/search.js"></script>
+
 <script src="https://lib.baomitu.com/clipboard.js/2.0.8/clipboard.min.js"></script>
 
 <script src="/lib/codeBlock/codeBlockFuction.js"></script>
@@ -1435,10 +2051,6 @@ SELECT DISTINCT product_id, purchase_price FROM Product;
 <script src="/lib/codeBlock/codeShrink.js"></script>
 
 <link rel="stylesheet" href="/lib/codeBlock/matery.css">
-
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-
-<script src="/js/search.js"></script>
 
 <script src="/js/webapp.js"></script>
 <!-- hexo injector body_end end --></body>
