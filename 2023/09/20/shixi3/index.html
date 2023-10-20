@@ -29,7 +29,7 @@
 <meta property="og:image" content="http://example.com/2023/09/20/shixi3/i2.png">
 <meta property="og:image" content="http://example.com/2023/09/20/shixi3/i3.png">
 <meta property="article:published_time" content="2023-09-20T08:54:41.373Z">
-<meta property="article:modified_time" content="2023-10-19T02:49:31.445Z">
+<meta property="article:modified_time" content="2023-10-20T03:08:11.199Z">
 <meta property="article:author" content="puyiping">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/2023/09/20/shixi3/4-1Z220153J2254.gif">
@@ -41,7 +41,7 @@
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_8z08qcz5sq3.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1697683785027">
+  <link rel="stylesheet" href="/css/style.css?v=1697790883193">
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -201,8 +201,8 @@
 
         <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2023年09月20日</a>
-    <a><i class="nexmoefont icon-areachart"></i>7.7k 字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 34 分钟</a>
+    <a><i class="nexmoefont icon-areachart"></i>7.9k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 35 分钟</a>
 </div>
 
         <div class="nexmoe-post-right">
@@ -255,7 +255,8 @@
 <p>数据库系统（Database System，DBS）由硬件和软件共同构成。硬件主要用于存储数据库中的数据，包括计算机、存储设备等。软件部分主要包括数据库管理系统、支持数据库管理系统运行的操作系统，以及支持多种语言进行应用开发的访问技术等。</p>
 </blockquote>
 <hr>
-<h3 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h3><p>数据库系统是指在计算机系统中引入数据库后的系统。完整的数据库系统结构关系如图所示：</p>
+<p><strong>组成</strong></p>
+<p>数据库系统是指在计算机系统中引入数据库后的系统。完整的数据库系统结构关系如图所示：</p>
 <p><img data-fancybox="gallery" data-sizes="auto" data-src="4-1Z220153J2254.gif" alt="shixi3" class="lazyload"></p>
 <p>一个完整的数据库系统一般由数据库、数据库管理系统、应用开发工具、应用系统、数据库管理员和用户组成。</p>
 <hr>
@@ -270,18 +271,32 @@
 <p>虽然已经有了 DBMS，但是在很多情况下，DBMS 无法满足对数据管理的要求。</p>
 <p><strong>数据库应用程序（DataBase Application）</strong>的使用可以满足对数据管理的更高要求，还可以使数据管理过程更加直观和友好。数据库应用程序负责与 DBMS 进行通信、访问和管理 DBMS 中存储的数据，允许用户插入、修改、删除数据库中的数据。</p>
 <hr>
-<h3 id="DBMS"><a href="#DBMS" class="headerlink" title="DBMS"></a>DBMS</h3><h4 id="1-数据定义功能"><a href="#1-数据定义功能" class="headerlink" title="1) 数据定义功能"></a>1) 数据定义功能</h4><p>DBMS 提供数据定义语言（Data Definition Language，DDL），用户通过它可以方便地对数据库中的数据对象进行定义。</p>
-<h4 id="2-数据操纵功能"><a href="#2-数据操纵功能" class="headerlink" title="2) 数据操纵功能"></a>2) 数据操纵功能</h4><p>DBMS 还提供数据操纵语言（Data Manipulation Language，DML），用户可以使用 DML 操作数据，实现对数据库的基本操作，如查询、插入、删除和修改等。</p>
-<h4 id="3-数据库的运行管理"><a href="#3-数据库的运行管理" class="headerlink" title="3) 数据库的运行管理"></a>3) 数据库的运行管理</h4><p>数据库在建立、运用和维护时由数据库管理系统统一管理、统一控制，以保证数据的安全性、完整性、多用户对数据的并发使用及发生故障后的系统恢复。例如：</p>
+<h6 id="DBMS"><a href="#DBMS" class="headerlink" title="DBMS"></a>DBMS</h6><ol>
+<li><strong>数据定义功能</strong></li>
+</ol>
+<p>DBMS 提供数据定义语言（Data Definition Language，DDL），用户通过它可以方便地对数据库中的数据对象进行定义。</p>
+<ol start="2">
+<li><strong>数据操纵功能</strong></li>
+</ol>
+<p>DBMS 还提供数据操纵语言（Data Manipulation Language，DML），用户可以使用 DML 操作数据，实现对数据库的基本操作，如查询、插入、删除和修改等。</p>
+<ol start="3">
+<li><strong>数据库的运行管理</strong></li>
+</ol>
+<p>数据库在建立、运用和维护时由数据库管理系统统一管理、统一控制，以保证数据的安全性、完整性、多用户对数据的并发使用及发生故障后的系统恢复。例如：</p>
 <ol>
 <li>数据的完整性检查功能保证用户输入的数据应满足相应的约束条件；</li>
 <li>数据库的安全保护功能保证只有赋予权限的用户才能访问数据库中的数据；</li>
 <li>数据库的并发控制功能使多个用户可以在同一时刻并发地访问数据库的数据；</li>
 <li>数据库系统的故障恢复功能使数据库运行出现故障时可以进行数据库恢复，以保证数据库可靠地运行。</li>
 </ol>
-<h4 id="4-提供方便、有效地存取数据库信息的接口和工具"><a href="#4-提供方便、有效地存取数据库信息的接口和工具" class="headerlink" title="4) 提供方便、有效地存取数据库信息的接口和工具"></a>4) 提供方便、有效地存取数据库信息的接口和工具</h4><p>编程人员可通过编程语言与数据库之间的接口进行数据库应用程序的开发。数据库管理员（Database Administrator，DBA）可通过提供的工具对数据库进行管理。</p>
-<h4 id="5-数据库的建立和维护功能"><a href="#5-数据库的建立和维护功能" class="headerlink" title="5) 数据库的建立和维护功能"></a>5) 数据库的建立和维护功能</h4><p>数据库功能包括数据库初始数据的输入、转换功能，数据库的转储、恢复功能，数据库的重组织功能和性能监控、分析功能等。这些功能通常由一些使用程序来完成。</p>
-<h1 id="MYSQL的基本操作"><a href="#MYSQL的基本操作" class="headerlink" title="MYSQL的基本操作"></a>MYSQL的基本操作</h1><!--MySQL 安装好之后就可以进行数据库的相关操作了。数据库就像车库一样，每一个小区里都有很多车库用来存放车，它们都有唯一的车库号。同样，在 MySQL 中也可以创建多个不同名称的数据库存储数据。-->
+<hr>
+<ol start="4">
+<li><strong>提供方便、有效地存取数据库信息的接口和工具</strong></li>
+</ol>
+<p>编程人员可通过编程语言与数据库之间的接口进行数据库应用程序的开发。数据库管理员（Database Administrator，DBA）可通过提供的工具对数据库进行管理。</p>
+<p><strong>5) 数据库的建立和维护功能</strong></p>
+<p>数据库功能包括数据库初始数据的输入、转换功能，数据库的转储、恢复功能，数据库的重组织功能和性能监控、分析功能等。这些功能通常由一些使用程序来完成。</p>
+<h2 id="MYSQL的基本操作"><a href="#MYSQL的基本操作" class="headerlink" title="MYSQL的基本操作"></a>MYSQL的基本操作</h2><!--MySQL 安装好之后就可以进行数据库的相关操作了。数据库就像车库一样，每一个小区里都有很多车库用来存放车，它们都有唯一的车库号。同样，在 MySQL 中也可以创建多个不同名称的数据库存储数据。-->
 
 <p>SQL 具有如下优点。</p>
 <ol>
@@ -335,7 +350,7 @@ VALUES (41048101, &#39;C语言中文网MySQL教程&#39;, &#39;1&#39;, &#39;2013-
 | 浦逸平        |
 +--------------+
 </code></pre>
-<h1 id="SQL的基本书写规则"><a href="#SQL的基本书写规则" class="headerlink" title="SQL的基本书写规则"></a>SQL的基本书写规则</h1><p>在 RDBMS （关系型数据库）当中，SQL 语句是逐条执行的，一条 SQL 语句代表着数据库的一个操作。</p>
+<h2 id="SQL的基本书写规则"><a href="#SQL的基本书写规则" class="headerlink" title="SQL的基本书写规则"></a>SQL的基本书写规则</h2><p>在 RDBMS （关系型数据库）当中，SQL 语句是逐条执行的，一条 SQL 语句代表着数据库的一个操作。</p>
 <p>我们通常在句子的句尾加注标点表示这句话结束，中文句子以句号<code>。</code>结尾，英文以点号<code>.</code>结尾，而 SQL 语句则使用英文分号<code>;</code>结尾。</p>
 <p><strong>SQL 语句不区分大小写</strong></p>
 <p>SQL 不区分<strong>关键字</strong>(<em>数据库事先定义的，有特别意义的单词。</em>)的大小写</p>
@@ -347,8 +362,7 @@ VALUES (41048101, &#39;C语言中文网MySQL教程&#39;, &#39;1&#39;, &#39;2013-
 <li>数据库名、表名和列名等小写</li>
 </ol>
 <p>下表总结了 SQL 元素在 Windows 和 Linux 系统是否区分大小写。</p>
-<div>
-<table>
+<table bgcolor="gold">
 <tbody>
 <tr>
 <th>&nbsp;</th>
@@ -382,8 +396,8 @@ VALUES (41048101, &#39;C语言中文网MySQL教程&#39;, &#39;1&#39;, &#39;2013-
 </tr>
 </tbody>
 </table>
-==注：插入到表中的数据是区分大小写的。😂==
 
+<p>&#x3D;&#x3D;注：插入到表中的数据是区分大小写的。👍&#x3D;&#x3D;</p>
 <p><strong>常数的书写方式是固定的</strong></p>
 <p>SQL 语句常常需要直接书写字符串、日期或者数字。例如，书写向表中插入字符串、日期或者数字等数据的 SQL 语句。</p>
 <p>在 SQL 语句中直接书写的字符串、日期或者数字等称为常数。常数的书写方式如下所示：</p>
@@ -590,8 +604,6 @@ VALUES (41048101, &#39;C语言中文网MySQL教程&#39;, &#39;1&#39;, &#39;2013-
 </tr>
 </tbody>
 </table>
-
-
 
 
 
@@ -875,6 +887,24 @@ Query OK, 1 row affected (0.00 sec)
 +--------------+-----------------------------------------------------+
 1 row in set (0.00 sec)
 </code></pre>
+<h6 id="MySQL-CREATE-TABLE"><a href="#MySQL-CREATE-TABLE" class="headerlink" title="MySQL CREATE TABLE"></a>MySQL CREATE TABLE</h6><pre><code class="mysql">CREATE TABLE [IF NOT EXISTS] table_name(
+    column_list
+) ENGINE=storage_engine 
+</code></pre>
+<p>创建申请表：</p>
+<pre><code class="mysql">CREATE TABLE application (
+    id INT PRIMARY KEY AUTO_INCREMENT,   #存储自动生成的ID值
+    supplierName VARCHAR(50) NOT NULL,
+    phone VARCHAR(50),
+    address VARCHAR(50),
+    city VARCHAR(50),
+    state VARCHAR(50),
+    country VARCHAR(50),
+    customerNumber INT,
+    PRIMARY KEY (supplierNumber)
+    adddate TIMESTAMP DEFAULT CURRENT_TIMESTAMP #设置当前时间
+); 
+</code></pre>
 <h1 id="MySQL修改数据库"><a href="#MySQL修改数据库" class="headerlink" title="MySQL修改数据库"></a>MySQL修改数据库</h1><p>在 MySQL 中，可以使用 <strong>ALTER DATABASE</strong> 来修改已经被创建或者存在的数据库的相关参数。</p>
 <pre><code class="mysql">ALTER DATABASE [数据库名] &#123; 
 [ DEFAULT ] CHARACTER SET &lt;字符集名&gt; |
@@ -911,10 +941,6 @@ mysql&gt; SHOW CREATE DATABASE test_db;
 
 mysql&gt;
 </code></pre>
-<h6 id="MySQL-CREATE-TABLE"><a href="#MySQL-CREATE-TABLE" class="headerlink" title="MySQL CREATE TABLE"></a>MySQL CREATE TABLE</h6><pre><code class="mysql">CREATE TABLE [IF NOT EXISTS] table_name(
-    column_list
-) ENGINE=storage_engine 
-</code></pre>
 <h6 id="INSERT插入table语句"><a href="#INSERT插入table语句" class="headerlink" title="INSERT插入table语句"></a><strong>INSERT插入table语句</strong></h6><p>向数据库表中插入一条新记录,使用<code>INSERT</code>语句。</p>
 <pre><code class="mysql">INSERT INTO 表名 (字段1, 字段2, ...) VALUES (值1, 值2, ...);
 </code></pre>
@@ -948,6 +974,7 @@ FROM
     country VARCHAR(50),
     customerNumber INT,
     PRIMARY KEY (supplierNumber)
+    adddate TIMESTAMP DEFAULT CURRENT_TIMESTAMP #设置当前时间
 ); 
 </code></pre>
 <p><img data-fancybox="gallery" data-sizes="auto" data-src="i2.png" alt="shixi3" class="lazyload"></p>
@@ -1048,6 +1075,11 @@ mysql&gt;
 </code></pre>
 <p>&#x3D;&#x3D;注：使用 DROP DATABASE 命令时要非常谨慎，在执行该命令后，MySQL 不会给出任何提示确认信息。DROP DATABASE 删除数据库后，数据库中存储的所有数据表和数据也将一同被删除，而且不能恢复。因此最好在删除数据库之前先将数据库进行备份。😠&#x3D;&#x3D;</p>
 <h6 id="删除表DELETE"><a href="#删除表DELETE" class="headerlink" title="删除表DELETE"></a>删除表DELETE</h6><blockquote>
+<p>删除表</p>
+</blockquote>
+<pre><code class="mysql">DROP TABLE table_NAME;
+</code></pre>
+<blockquote>
 <p><strong>MySQL DELETE</strong>语句从单个表中删除数据。</p>
 </blockquote>
 <pre><code class="mysql">DELETE FROM table_name      //指定从中删除数据的表。
@@ -1062,8 +1094,8 @@ WHERE condition;            //使用条件指定WHERE子句中要删除的行。
 WHERE
     officeCode = 4; 
 </code></pre>
-<div style="width:620px">
-<div style="width:130px;float:left">
+<div style="width:580px">
+<div style="width:100px;float:left">
 <table>
     <thead>                                      <tr>                                      
  <th bgcolor="antiquewhite">employees</th>      </tr>
@@ -1091,8 +1123,10 @@ WHERE
 </table>
 </div>
    <div style="width:150px;height:30px;float:left">
-      &nbsp&nbsp&nbsp&nbsp officeCode = 4
-      &nbsp&nbsp&nbsp&nbsp→→→→→→→ </div> 
+     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      &nbsp&nbsp&nbsp&nbsp→→→→→→→ 
+    &nbsp&nbsp&nbsp&nbsp officeCode = 4</div> 
 <div style="width:130px;float:left">
 <table>
     <thead>                                      <tr>                                      
@@ -1123,16 +1157,23 @@ WHERE
  <th bgcolor="antiquewhite">employees</th>
        </tr>
   </table></div>
-<div style="width:130px;float:right"> 
-</div>
 
-
-<p>​       $\longrightarrow$$\longrightarrow$</p>
-<p>​       <code>DELETE </code></p>
-<p>​      <code>FROM employees; </code></p>
-<p>​       #删除employees表中</p>
-<p>​       的所有行，使用DELETE</p>
+<p>​    $\longrightarrow$$\longrightarrow$</p>
+<p>   <code>DELETE </code></p>
+<p>   <code>FROM employees; </code></p>
+<p>​    #删除employees表中</p>
+<p>​    的所有行，使用DELETE</p>
 <p>​       不带WHERE子句的语句</p>
+<p>删除<code>students</code>表中<code>id=1</code>的记录：</p>
+<pre><code class="mysql">DELETE FROM students WHERE id=1;
+-- 查询并观察结果:
+SELECT * FROM students;
+</code></pre>
+<pre><code class="mysql">-- 删除id=5,6,7的记录
+DELETE FROM students WHERE id&gt;=5 AND id&lt;=7;
+-- 查询并观察结果:
+SELECT * FROM students;
+</code></pre>
 <p>&#x3D;&#x3D;注意：一旦删除数据，它就会消失。因此，您应在执行下一节中的语句之前备份数据库 $DELETE$。&#x3D;&#x3D;😠</p>
 <h6 id="数据库的备份"><a href="#数据库的备份" class="headerlink" title="数据库的备份"></a>数据库的备份</h6><blockquote>
 <p>MySQL提供了一个非常有用的工具，可以非常快速地在服务器上本地备份或转储MySQL数据库。备份文件存储在服务器的文件系统中，因此您只需在需要时下载它。 备份MySQL数据库的工具是mysqldump。它位于MySQL安装文件夹的root &#x2F; bin文件夹中。 mysqldump是MySQL提供的一个程序，可用于转储数据库以备份或传输数据库到另一个数据库服务器。 转储文件包含一组用于创建数据库对象的SQL语句。此外，mysqldump可用于生成CSV，分隔符或XML文件。</p>
@@ -1192,8 +1233,10 @@ SELECT DISTINCT product_id, purchase_price FROM Product;
 <li><p>任何注释（单行注释和多行注释）都可以插在 SQL 语句中，且注释可以放在 SQL 语句中的任意位置。</p>
 </li>
 <li><p>注释可以写在任何 SQL 语句当中，且 SQL 语句中对注释的数量没有限制。</p>
-<h1 id="typora扩展"><a href="#typora扩展" class="headerlink" title="typora扩展"></a>typora扩展</h1><p>  alpha:$\alpha$  beta:$\beta$  gamma:$\gamma$  theta:$\theta$  rho:$\rho$ lambda:$\lambda$ mu:$\mu$</p>
 </li>
+</ul>
+<h1 id="附加：typora扩展"><a href="#附加：typora扩展" class="headerlink" title="附加：typora扩展"></a>附加：typora扩展</h1><ul>
+<li>alpha:$\alpha$  beta:$\beta$  gamma:$\gamma$  theta:$\theta$  rho:$\rho$ lambda:$\lambda$ mu:$\mu$</li>
 </ul>
 <p>Delta:$\Delta$  pi:$\pi$  Omega:$\Omega$</p>
 <p>uparrow:$\uparrow$</p>
@@ -1214,7 +1257,7 @@ SELECT DISTINCT product_id, purchase_price FROM Product;
 <p>$\sin^2+\cos^2&#x3D;1$</p>
 <p>$\sin\frac{\pi}{2}&#x3D;1$</p>
 <p>$\sin{\frac{\pi}{3}}&#x3D;\frac{\sqrt3}{2}$</p>
-</div></div>
+</div>
         </article>
 
         
@@ -1966,7 +2009,7 @@ SELECT DISTINCT product_id, purchase_price FROM Product;
 <script src="/lib/fancybox/js/jquery.fancybox.min.js"></script>
 
 
-<script src="/js/app.js?v=1697683785029"></script>
+<script src="/js/app.js?v=1697790883195"></script>
 
 <script src="https://lib.baomitu.com/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
 <script>
